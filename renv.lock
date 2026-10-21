@@ -1614,6 +1614,31 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
+    "getPass": {
+      "Package": "getPass",
+      "Version": "0.2-4",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Masked User Input",
+      "Description": "A micro-package for reading \"passwords\", i.e.  reading user input with masking, so that the input is not displayed as it  is typed.  Currently we have support for 'RStudio', the command line (every OS), and any platform where 'tcltk' is present.",
+      "License": "BSD 2-clause License + file LICENSE",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Imports": [
+        "utils",
+        "rstudioapi (>= 0.5)"
+      ],
+      "NeedsCompilation": "yes",
+      "ByteCompile": "yes",
+      "Authors@R": "c( person(\"Drew\", \"Schmidt\", role=c(\"aut\", \"cre\"), email=\"wrathematics@gmail.com\"), person(\"Wei-Chen\", \"Chen\", role=\"aut\"), person(\"Gabor\", \"Csardi\", role=\"ctb\", comment=\"Improved terminal detection\"), person(\"Rich\", \"FitzJohn\", role=\"ctb\") )",
+      "URL": "https://github.com/wrathematics/getPass",
+      "BugReports": "https://github.com/wrathematics/getPass/issues",
+      "Maintainer": "Drew Schmidt <wrathematics@gmail.com>",
+      "RoxygenNote": "6.0.1",
+      "Author": "Drew Schmidt [aut, cre], Wei-Chen Chen [aut], Gabor Csardi [ctb] (Improved terminal detection), Rich FitzJohn [ctb]",
+      "Repository": "CRAN"
+    },
     "ggplot2": {
       "Package": "ggplot2",
       "Version": "4.0.3",
@@ -3789,6 +3814,40 @@
       "Author": "JJ Allaire [aut], Yihui Xie [aut, cre] (ORCID: <https://orcid.org/0000-0003-0645-5666>), Christophe Dervieux [aut] (ORCID: <https://orcid.org/0000-0003-4474-2498>), Jonathan McPherson [aut], Javier Luraschi [aut], Kevin Ushey [aut], Aron Atkins [aut], Hadley Wickham [aut], Joe Cheng [aut], Winston Chang [aut], Richard Iannone [aut] (ORCID: <https://orcid.org/0000-0003-3925-190X>), Andrew Dunning [ctb] (ORCID: <https://orcid.org/0000-0003-0464-5036>), Atsushi Yasumoto [ctb, cph] (ORCID: <https://orcid.org/0000-0002-8335-495X>, cph: Number sections Lua filter), Barret Schloerke [ctb], Carson Sievert [ctb] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Devon Ryan [ctb] (ORCID: <https://orcid.org/0000-0002-8549-0971>), Frederik Aust [ctb] (ORCID: <https://orcid.org/0000-0003-4900-788X>), Jeff Allen [ctb], JooYoung Seo [ctb] (ORCID: <https://orcid.org/0000-0002-4064-6012>), Malcolm Barrett [ctb], Rob Hyndman [ctb], Romain Lesur [ctb], Roy Storey [ctb], Ruben Arslan [ctb], Sergio Oller [ctb], Posit Software, PBC [cph, fnd], jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in inst/rmd/h/jqueryui/AUTHORS.txt), Mark Otto [ctb] (Bootstrap library), Jacob Thornton [ctb] (Bootstrap library), Bootstrap contributors [ctb] (Bootstrap library), Twitter, Inc [cph] (Bootstrap library), Alexander Farkas [ctb, cph] (html5shiv library), Scott Jehl [ctb, cph] (Respond.js library), Ivan Sagalaev [ctb, cph] (highlight.js library), Greg Franko [ctb, cph] (tocify library), John MacFarlane [ctb, cph] (Pandoc templates), Google, Inc. [ctb, cph] (ioslides library), Dave Raggett [ctb] (slidy library), W3C [cph] (slidy library), Dave Gandy [ctb, cph] (Font-Awesome), Ben Sperry [ctb] (Ionicons), Drifty [cph] (Ionicons), Aidan Lister [ctb, cph] (jQuery StickyTabs), Benct Philip Jonsson [ctb, cph] (pagebreak Lua filter), Albert Krewinkel [ctb, cph] (pagebreak Lua filter)",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
+    },
+    "rndop": {
+      "Package": "rndop",
+      "Version": "0.2.2.9000",
+      "Source": "GitHub",
+      "Title": "Access to the Data from The Species Occurrence Database of NCA CR (Czechia) in R",
+      "Authors@R": "person(\"Oto\", \"Kaláb\", , \"kalab.oto@example.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-3485-9377\"))",
+      "Description": "A programmatic interface to the The Species Occurrence Database of NCA CR (NDOP AOPK). The NDOP is Czech national species occurrence database  of NCA CR (Nature Conservation Agency of the Czech Republic;  <https://portal.nature.cz/nd/>). Database includes occurrence records both  from professionals (monitorings, inventarisations) and citizen scientists.  Use of the database is free and requires free registration  (<https://idm.nature.cz/idm/#/registration>). Data itself are published  under CC BY-SA 4.0 licence and should be referenced according to AOPK  citation rules  (<https://portal23.nature.cz/publik_syst/ctihtmlpage.php?what=4910>).",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "Roxygen": "list(markdown = TRUE)",
+      "RoxygenNote": "7.2.3",
+      "Imports": [
+        "httr",
+        "getPass",
+        "jsonlite",
+        "sf",
+        "xml2"
+      ],
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Suggests": [
+        "testthat (>= 3.0.0)"
+      ],
+      "Config/testthat/edition": "3",
+      "Author": "Oto Kaláb [aut, cre] (ORCID: <https://orcid.org/0000-0003-3485-9377>)",
+      "Maintainer": "Oto Kaláb <kalab.oto@example.com>",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "kalab-oto",
+      "RemoteRepo": "rndop",
+      "RemoteRef": "f78ebae60b30355ce6768cbcd37968295415e2b9",
+      "RemoteSha": "f78ebae60b30355ce6768cbcd37968295415e2b9"
     },
     "rprojroot": {
       "Package": "rprojroot",

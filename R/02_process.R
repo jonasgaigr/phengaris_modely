@@ -1,6 +1,7 @@
 # Intersect the modelled habitat of Phengaris nausithous and P. teleius with the
-# EVL (SCI) sites where each species is a qualifying feature, and compute
-# per-site areas. All geometry operations run in S-JTSK / Krovak East North
+# EVL (SCI) sites where each species is a qualifying feature, compute per-site
+# areas and select the NDOP occurrence records inside the same sites. All
+# geometry operations run in S-JTSK / Krovak East North
 # (EPSG:5514) on unsimplified geometries. Outputs go to data/processed/.
 
 library(tidyverse)
@@ -33,6 +34,14 @@ prob_field <- "ver.nausithous.romp"
 # Polygons whose area outside the site exceeds this are counted as straddling
 # the boundary (ignores numerical noise from clipping), in ha (= 1 m2)
 straddle_tol_ha <- 1e-4
+
+# NDOP occurrence records shown on the map (decisions of 2026-10-21): positive
+# records since ndop_date_from, credible or not yet validated (records flagged
+# for correction are dropped), location accuracy <= ndop_max_accuracy_m, and
+# only inside the sites where the species is a qualifying feature
+ndop_file <- "ndop_phengaris.csv"
+ndop_date_from <- as.Date("2019-01-01")
+ndop_max_accuracy_m <- 500
 
 raw_dir <- here("data", "raw")
 out_dir <- here("data", "processed")
@@ -232,6 +241,77 @@ if (any(abs(union_check$diff_ha) > 0.01)) {
   stop("Habitat fragments overlap: summed area differs from union area", call. = FALSE)
 }
 
+# --- NDOP occurrence records ------------------------------------------------------
+
+ndop_raw <- read_csv(file.path(raw_dir, ndop_file), col_types = cols(.default = col_character()),
+                     na = "")
+
+ndop <- ndop_raw |>
+  transmute(
+    species = recode_values(DRUH, "Phengaris nausithous" ~ "nausithous",
+                            "Phengaris teleius" ~ "teleius"),
+    ndop_id = as.integer(ID_NALEZ),
+    date_from = as.Date(DATUM_OD, "%Y%m%d"),
+    date_to = as.Date(DATUM_DO, "%Y%m%d"),
+    negative = NEGATIV == "1",
+    validation = recode_values(coalesce(VALIDACE, ""),
+                               "věrohodný záznam" ~ "credible",
+                               "" ~ "unvalidated",
+                               "záznam k opravě" ~ "to_correct"),
+    accuracy_m = as.numeric(CXPRESNOST),
+    count = as.numeric(POCET),
+    count_estimated = ODHAD == "1",
+    count_unit = coalesce(POCITANO, ""),
+    x = as.numeric(X),
+    y = as.numeric(Y)
+  )
+
+if (anyNA(ndop$species) || anyNA(ndop$ndop_id) || anyDuplicated(ndop$ndop_id) ||
+      anyNA(ndop$date_from) || anyNA(ndop$negative) || anyNA(ndop$validation)) {
+  stop("Unexpected values in ", ndop_file, " (species, ID, date, negative or validation)",
+       call. = FALSE)
+}
+
+# Selection steps; the number of records left after each one goes to metadata.yml
+ndop_steps <- list(
+  downloaded = \(d) d,
+  positive = \(d) filter(d, !negative),
+  since_date_from = \(d) filter(d, date_from >= ndop_date_from),
+  not_to_correct = \(d) filter(d, validation != "to_correct"),
+  with_coordinates = \(d) filter(d, !is.na(x), !is.na(y)),
+  accuracy_ok = \(d) filter(d, !is.na(accuracy_m), accuracy_m <= ndop_max_accuracy_m)
+)
+ndop_counts <- list()
+for (step in names(ndop_steps)) {
+  ndop <- ndop_steps[[step]](ndop)
+  ndop_counts[[step]] <- as.list(table(factor(ndop$species, species$species)))
+}
+
+# Inside the sites of the same species (they do not overlap, see above)
+occurrences <- ndop |>
+  st_as_sf(coords = c("x", "y"), crs = crs_work, remove = FALSE) |>
+  select(-negative) |>
+  split(~species) |>
+  imap(\(x, sp) {
+    sp_sites <- filter(sites, species == sp) |> select(site_code, site_name)
+    st_join(x, sp_sites, join = st_intersects, left = FALSE)
+  }) |>
+  bind_rows() |>
+  arrange(species, site_code, desc(date_from), ndop_id) |>
+  relocate(species, site_code, site_name)
+stopifnot(!anyDuplicated(occurrences$ndop_id))
+ndop_counts$inside_sites <- as.list(table(factor(occurrences$species, species$species)))
+
+site_summary <- site_summary |>
+  left_join(
+    occurrences |>
+      st_drop_geometry() |>
+      group_by(species, site_code) |>
+      summarise(n_records = n(), last_record = max(date_from), .groups = "drop"),
+    by = c("species", "site_code")
+  ) |>
+  mutate(n_records = coalesce(n_records, 0L))
+
 # --- Outputs --------------------------------------------------------------------
 
 st_write(habitat, file.path(out_dir, "habitat_in_sites.gpkg"), layer = "habitat_in_sites",
@@ -239,6 +319,8 @@ st_write(habitat, file.path(out_dir, "habitat_in_sites.gpkg"), layer = "habitat_
 st_write(sites |> left_join(select(site_summary, -site_name, -site_area_ha, -site_area_official_ha),
                             by = c("species", "site_code")),
          file.path(out_dir, "sites.gpkg"), layer = "sites", delete_dsn = TRUE, quiet = TRUE)
+st_write(occurrences, file.path(out_dir, "occurrences_in_sites.gpkg"),
+         layer = "occurrences_in_sites", delete_dsn = TRUE, quiet = TRUE)
 write_csv(site_summary, file.path(out_dir, "site_summary.csv"))
 write_csv(breakdown, file.path(out_dir, "habitat_breakdown.csv"))
 
@@ -261,7 +343,14 @@ metadata <- list(
   sources = list(
     evl = src("evl.zip"),
     features = src("seznam_predmetolokalit_Natura2000_2_2025.xlsx"),
-    habitat = as.list(set_names(species$gpkg, species$species))
+    habitat = as.list(set_names(species$gpkg, species$species)),
+    ndop = src(ndop_file)
+  ),
+  ndop = list(
+    date_from = format(ndop_date_from),
+    max_accuracy_m = ndop_max_accuracy_m,
+    last_record = format(max(occurrences$date_from)),
+    n_records = ndop_counts
   ),
   n_sites = as.list(table(site_summary$species)),
   habitat_total_ha = as.list(tapply(site_summary$habitat_ha, site_summary$species, sum)),
@@ -271,4 +360,6 @@ write_yaml(metadata, file.path(out_dir, "metadata.yml"))
 
 totals <- unlist(metadata$habitat_total_ha)
 message("Done. Habitat inside sites (ha): ",
-        paste(names(totals), round(totals, 1), collapse = ", "))
+        paste(names(totals), round(totals, 1), collapse = ", "),
+        ". NDOP records inside sites: ",
+        paste(names(ndop_counts$inside_sites), ndop_counts$inside_sites, collapse = ", "))

@@ -29,3 +29,6 @@ renv/staging/
 
 # Extracted copy of data/raw/evl.zip (recreated by R/01_download.R)
 data/raw/evl/
+
+# NDOP export: login-only data with observer names (recreated by R/01_download.R)
+data/raw/ndop_phengaris.csv

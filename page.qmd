@@ -34,6 +34,7 @@ tr <- translator(strings, lang)
 fmt_num <- number_formatter(tr)
 fmt_date <- date_formatter(lang)
 tr_kves <- kves_translator(strings, lang)
+tr_count_unit <- count_unit_translator(strings, lang)
 fmt_pct <- \(x) tr("fmt_pct", x = fmt_num(x, 0.1))
 fmt_pclass <- \(lo, hi) paste0(fmt_num(lo, 0.1), "–", fmt_num(hi, 0.1))
 
@@ -46,6 +47,11 @@ breakdown <- read_csv(file.path(proc, "habitat_breakdown.csv"), show_col_types =
 site_bounds <- read_csv(file.path(proc, "site_bounds.csv"), show_col_types = FALSE)
 sites_web <- st_read(file.path(proc, "web_layers.gpkg"), layer = "sites_web", quiet = TRUE)
 habitat_web <- st_read(file.path(proc, "web_layers.gpkg"), layer = "habitat_web", quiet = TRUE)
+occurrences_web <- st_read(file.path(proc, "web_layers.gpkg"), layer = "occurrences_web",
+                           quiet = TRUE)
+ndop_year <- format(as.Date(meta$ndop$date_from), "%Y")
+# Formatted record counts after each selection step, e.g. ndop_n$positive[["teleius"]]
+ndop_n <- map(meta$ndop$n_records, \(x) map_chr(x, \(n) fmt_num(n, 1)))
 
 # Colour-blind-safe pair (validated: worst CVD delta E 24.7); teleius sites dashed
 species_info <- tibble(
@@ -95,7 +101,7 @@ dt_language <- list(
 
 ## `r tr("sec_map")` {#map}
 
-`r tr("map_intro")`
+`r tr("map_intro", year = ndop_year)`
 
 ```{r}
 #| label: site-zoom
@@ -151,9 +157,12 @@ fmt_ha <- \(x) paste(fmt_num(x, 0.1), tr("unit_ha"))
 site_popups <- site_tbl |>
   arrange(site_code, species) |>
   mutate(sp_html = sprintf(
-    "<hr><b>%s</b> (<i>%s</i>)<br>%s: %s (%s %s)",
+    "<hr><b>%s</b> (<i>%s</i>)<br>%s: %s (%s %s)<br>%s: %s%s",
     htmlEscape(common), latin, tr("pop_hab_area"), fmt_ha(habitat_ha),
-    fmt_pct(cover_pct), tr("pop_cover")
+    fmt_pct(cover_pct), tr("pop_cover"),
+    tr("pop_records", year = ndop_year), fmt_num(n_records, 1),
+    if_else(n_records > 0,
+            sprintf(" (%s %s)", tr("pop_last_record"), fmt_date(last_record)), "")
   )) |>
   group_by(site_code, site_name, site_area_ha) |>
   summarise(sp_html = paste(sp_html, collapse = ""), .groups = "drop") |>
@@ -174,9 +183,38 @@ habitat_map <- habitat_web |>
     tr("pop_patch_area"), fmt_ha(area_ha)
   ))
 
+occ_map <- occurrences_web |>
+  left_join(species_info, by = "species") |>
+  mutate(
+    date = if_else(date_to == date_from, fmt_date(date_from),
+                   paste(fmt_date(date_from), "–", fmt_date(date_to))),
+    unit_lab = map_chr(count_unit, \(u) if (u == "") "" else tr_count_unit(u)),
+    count_details = paste0(
+      unit_lab,
+      if_else(unit_lab != "" & count_estimated, "; ", ""),
+      if_else(count_estimated, tr("pop_occ_estimated"), "")
+    ),
+    count_html = case_when(
+      is.na(count) ~ "",
+      count_details == "" ~ sprintf("<br>%s: %s", tr("pop_occ_count"), fmt_num(count, 1)),
+      .default = sprintf("<br>%s: %s (%s)", tr("pop_occ_count"), fmt_num(count, 1),
+                         htmlEscape(count_details))
+    ),
+    popup = sprintf(
+      "<b>%s</b> (<i>%s</i>)<br>%s: %s%s<br>%s: %s<br>%s: %s %s<br>%s: %s<br>%s: %s",
+      htmlEscape(common), latin,
+      tr("pop_occ_date"), date, count_html,
+      tr("pop_occ_validation"), map_chr(validation, \(v) tr(paste0("val_", v))),
+      tr("pop_occ_accuracy"), fmt_num(accuracy_m, 1), tr("unit_m"),
+      tr("pop_site"), htmlEscape(sprintf("%s (%s)", site_name, site_code)),
+      tr("pop_occ_id"), ndop_id
+    )
+  )
+
 m <- leaflet(elementId = "overview-map", width = "100%", height = 650) |>
   addMapPane("pane_sites", zIndex = 410) |>
   addMapPane("pane_habitat", zIndex = 420) |>
+  addMapPane("pane_occurrences", zIndex = 430) |>
   addProviderTiles(providers$OpenStreetMap, group = tr("base_osm")) |>
   addProviderTiles(providers$Esri.WorldImagery, group = tr("base_aerial"))
 
@@ -208,8 +246,22 @@ for (sp in species_info$species) {
     )
 }
 
-legend_row <- function(swatch_style, label) {
-  div(class = "legend-row", span(class = "legend-swatch", style = swatch_style), label)
+# White border sets the dots apart from habitat patches of the same colour
+for (sp in species_info$species) {
+  info <- filter(species_info, species == sp)
+  m <- m |>
+    addCircleMarkers(
+      data = filter(occ_map, species == sp),
+      group = tr(paste0("grp_occ_", sp), year = ndop_year),
+      radius = 5, color = "#ffffff", weight = 1.5, opacity = 1,
+      fillColor = info$colour, fillOpacity = 1,
+      popup = ~popup,
+      options = pathOptions(pane = "pane_occurrences")
+    )
+}
+
+legend_row <- function(swatch_style, label, swatch_class = "legend-swatch") {
+  div(class = "legend-row", span(class = swatch_class, style = swatch_style), label)
 }
 legend_html <- tagList(
   tags$strong(tr("legend_title")),
@@ -219,7 +271,9 @@ legend_html <- tagList(
       legend_row(sprintf("border: 2.5px %s %s;", border, colour),
                  tr(paste0("grp_sites_", species))),
       legend_row(sprintf("background: %s; opacity: 0.7;", colour),
-                 tr(paste0("grp_hab_", species)))
+                 tr(paste0("grp_hab_", species))),
+      legend_row(sprintf("background: %s;", colour),
+                 tr(paste0("grp_occ_", species), year = ndop_year), "legend-dot")
     )
   })
 )
@@ -233,7 +287,8 @@ m <- m |>
     baseGroups = c(tr("base_osm"), tr("base_aerial")),
     overlayGroups = c(
       map_chr(species_info$species, \(s) tr(paste0("grp_sites_", s))),
-      map_chr(species_info$species, \(s) tr(paste0("grp_hab_", s)))
+      map_chr(species_info$species, \(s) tr(paste0("grp_hab_", s))),
+      map_chr(species_info$species, \(s) tr(paste0("grp_occ_", s), year = ndop_year))
     ),
     options = layersControlOptions(collapsed = FALSE)
   ) |>

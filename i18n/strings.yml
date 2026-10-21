@@ -62,8 +62,8 @@ sp_teleius:
 
 # --- Map -----------------------------------------------------------------------
 map_intro:
-  cs: "Hranice EVL jsou zobrazeny obrysem v barvě druhu, pro který je lokalita vymezena, preferovaný biotop plochou. Vrstvy a podkladovou mapu lze přepínat v pravém horním rohu mapy. Kliknutím na lokalitu nebo plochu biotopu se zobrazí podrobnosti. V lokalitách, kde jsou předmětem ochrany oba druhy, se biotopy obou druhů překrývají; jednotlivé vrstvy lze vypnout."
-  en: "SCI boundaries are drawn as outlines in the colour of the species they are designated for, preferred habitat as filled areas. Layers and the basemap can be switched in the top-right corner of the map. Click a site or a habitat patch for details. In sites where both species are qualifying features, the habitats of the two species overlap; switch layers off to see each one."
+  cs: "Hranice EVL jsou zobrazeny obrysem v barvě druhu, pro který je lokalita vymezena, preferovaný biotop plochou. Vrstvy a podkladovou mapu lze přepínat v pravém horním rohu mapy. Kliknutím na lokalitu nebo plochu biotopu se zobrazí podrobnosti. V lokalitách, kde jsou předmětem ochrany oba druhy, se biotopy obou druhů překrývají; jednotlivé vrstvy lze vypnout. Body s bílým okrajem jsou nálezy druhu z Nálezové databáze ochrany přírody (NDOP) od roku {year} uvnitř EVL, v nichž je druh předmětem ochrany."
+  en: "SCI boundaries are drawn as outlines in the colour of the species they are designated for, preferred habitat as filled areas. Layers and the basemap can be switched in the top-right corner of the map. Click a site or a habitat patch for details. In sites where both species are qualifying features, the habitats of the two species overlap; switch layers off to see each one. Dots with a white border are records of the species from the Species Occurrence Database of the Nature Conservation Agency (NDOP) since {year}, inside the SCIs where the species is a qualifying feature."
 zoom_label:
   cs: "Přiblížit na lokalitu:"
   en: "Zoom to site:"
@@ -88,6 +88,12 @@ grp_hab_nausithous:
 grp_hab_teleius:
   cs: "Preferovaný biotop – modrásek očkovaný"
   en: "Preferred habitat – Scarce Large Blue"
+grp_occ_nausithous:
+  cs: "Nálezy od roku {year} – modrásek bahenní"
+  en: "Records since {year} – Dusky Large Blue"
+grp_occ_teleius:
+  cs: "Nálezy od roku {year} – modrásek očkovaný"
+  en: "Records since {year} – Scarce Large Blue"
 legend_title:
   cs: "Legenda"
   en: "Legend"
@@ -120,6 +126,39 @@ pop_pclass:
 pop_patch_area:
   cs: "Plocha této kategorie a třídy v lokalitě"
   en: "Area of this category and class in the site"
+pop_records:
+  cs: "Nálezy od roku {year}"
+  en: "Records since {year}"
+pop_last_record:
+  cs: "poslední"
+  en: "latest"
+pop_occ_date:
+  cs: "Datum nálezu"
+  en: "Date"
+pop_occ_count:
+  cs: "Počet"
+  en: "Count"
+pop_occ_estimated:
+  cs: "odhad"
+  en: "estimate"
+pop_occ_validation:
+  cs: "Validace"
+  en: "Validation"
+pop_occ_accuracy:
+  cs: "Přesnost lokalizace"
+  en: "Location accuracy"
+pop_occ_id:
+  cs: "ID nálezu v NDOP"
+  en: "NDOP record ID"
+unit_m:
+  cs: "m"
+  en: "m"
+val_credible:
+  cs: "věrohodný záznam"
+  en: "credible record"
+val_unvalidated:
+  cs: "dosud nevalidováno"
+  en: "not yet validated"
 
 # --- Summary table ---------------------------------------------------------------
 table_intro:
@@ -259,3 +298,35 @@ kves_souvisla_zastavba:
 kves_suche_travniky:
   cs: "Suché trávníky"
   en: "Dry grasslands"
+
+# --- NDOP count units (cs = value of POCITANO in the NDOP export) ----------------
+count_unit_imaga:
+  cs: "imaga"
+  en: "adults"
+count_unit_jedinci:
+  cs: "jedinci"
+  en: "individuals"
+count_unit_samci:
+  cs: "samci"
+  en: "males"
+count_unit_samice:
+  cs: "samice"
+  en: "females"
+count_unit_housenky:
+  cs: "housenky"
+  en: "caterpillars"
+count_unit_kukly:
+  cs: "kukly"
+  en: "pupae"
+count_unit_vejce:
+  cs: "vejce"
+  en: "eggs"
+count_unit_pozerky:
+  cs: "požerky"
+  en: "feeding traces"
+count_unit_mrtvi_jedinci:
+  cs: "mrtví jedinci"
+  en: "dead individuals"
+count_unit_mrtve_samice:
+  cs: "mrtvé samice"
+  en: "dead females"

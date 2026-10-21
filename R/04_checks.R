@@ -42,7 +42,12 @@ scan_paths <- c(
 ) |>
   unlist() |>
   unique() |>
-  keep(file.exists)
+  keep(file.exists) |>
+  # The NDOP export is an input as downloaded, not an output (gitignored, never
+  # published): its observer column holds the NDOP login name of the account's
+  # own records, which is data rather than a leak
+  discard(\(f) normalizePath(f) == normalizePath(here("data/raw/ndop_phengaris.csv"),
+                                                  mustWork = FALSE))
 
 # A value that equals the OS account name also occurs in local file paths
 # (e.g. in logs); such hits are reported separately and do not fail the check.
@@ -164,8 +169,8 @@ for (id in c("summary-table", "breakdown-table")) {
 
 map_geom <- function(doc) {
   widget_json(doc, "overview-map")$x$calls |>
-    keep(\(call) call$method == "addPolygons") |>
-    map(\(call) call$args[[1]])
+    keep(\(call) call$method %in% c("addPolygons", "addCircleMarkers")) |>
+    map(\(call) if (call$method == "addPolygons") call$args[[1]] else call$args[1:2])
 }
 check("map: identical geometries in cs and en",
       identical(map_geom(corpus$cs$doc), map_geom(corpus$en$doc)))
@@ -248,6 +253,48 @@ check(
   all(max_offset_deg <= rounding_deg * (1 + 1e-6)),
   sprintf("%d groups, max offset %.2g deg (~%.2f m), allowed %.2g deg",
           length(expected), max(max_offset_deg), max(max_offset_deg) * 111320, rounding_deg)
+)
+
+# --- 8. NDOP records ------------------------------------------------------------------------
+# The map draws every selected record at its web-layer position
+meta <- read_yaml(here("data/processed/metadata.yml"))
+ndop_year <- format(as.Date(meta$ndop$date_from), "%Y")
+occurrences_web <- st_read(web_gpkg, layer = "occurrences_web", quiet = TRUE)
+drawn_points <- widget_json(corpus$cs$doc, "overview-map")$x$calls |>
+  keep(\(call) call$method == "addCircleMarkers")
+names(drawn_points) <- map_chr(drawn_points, \(call) call$args[[5]])
+
+point_offset_deg <- map_dbl(c("nausithous", "teleius"), \(sp) {
+  group <- glue::glue(strings[[paste0("grp_occ_", sp)]]$cs, year = ndop_year)
+  layer_xy <- unname(st_coordinates(filter(occurrences_web, species == sp)))
+  call <- drawn_points[[group]]
+  if (is.null(call)) return(Inf)
+  page_xy <- cbind(unlist(call$args[[2]]), unlist(call$args[[1]]))
+  if (!identical(dim(page_xy), dim(layer_xy))) return(Inf)
+  max(abs(page_xy - layer_xy))
+})
+n_inside <- unlist(meta$ndop$n_records$inside_sites)
+check(
+  "map: page draws every selected NDOP record at its position",
+  all(point_offset_deg <= rounding_deg * (1 + 1e-6)) &&
+    identical(as.integer(table(occurrences_web$species)[names(n_inside)]), as.integer(n_inside)),
+  sprintf("%s records, max offset %.2g deg", paste(n_inside, collapse = " + "),
+          max(point_offset_deg))
+)
+
+# The methods text skips the date and coordinate steps, so they must not drop records
+steps <- meta$ndop$n_records
+check(
+  "NDOP: date and coordinate steps drop no records (as the methods text assumes)",
+  identical(steps$since_date_from, steps$positive) &&
+    identical(steps$with_coordinates, steps$not_to_correct)
+)
+
+# Per-site record counts in the summary add up to the mapped records
+check(
+  "NDOP: per-site record counts add up to the mapped records",
+  identical(as.integer(tapply(summary_csv$n_records, summary_csv$species, sum)[names(n_inside)]),
+            as.integer(n_inside))
 )
 
 # --- Sizes ------------------------------------------------------------------------------------

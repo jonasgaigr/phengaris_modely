@@ -45,10 +45,10 @@ date_formatter <- function(lang) {
   }
 }
 
-# Translate KVES category names (the cs value of each kves_* key is the
-# original KATEGORIE value in the habitat layers)
-kves_translator <- function(strings, lang) {
-  keys <- grep("^kves_", names(strings), value = TRUE)
+# Translate original Czech data values: the cs value of each `<prefix>*` key is
+# the value as it occurs in the data
+value_translator <- function(strings, lang, prefix, what) {
+  keys <- grep(paste0("^", prefix), names(strings), value = TRUE)
   lookup <- setNames(
     vapply(keys, \(k) strings[[k]][[lang]], character(1)),
     vapply(keys, \(k) strings[[k]][["cs"]], character(1))
@@ -56,9 +56,19 @@ kves_translator <- function(strings, lang) {
   function(x) {
     missing <- setdiff(unique(x), names(lookup))
     if (length(missing) > 0) {
-      stop("KVES categories missing in i18n/strings.yml: ", paste(missing, collapse = ", "),
+      stop(what, " missing in i18n/strings.yml: ", paste(missing, collapse = ", "),
            call. = FALSE)
     }
     unname(lookup[x])
   }
+}
+
+# KVES category names (KATEGORIE in the habitat layers)
+kves_translator <- function(strings, lang) {
+  value_translator(strings, lang, "kves_", "KVES categories")
+}
+
+# What an NDOP count refers to (POCITANO, e.g. "jedinci")
+count_unit_translator <- function(strings, lang) {
+  value_translator(strings, lang, "count_unit_", "NDOP count units")
 }

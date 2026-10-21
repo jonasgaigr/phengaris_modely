@@ -1,5 +1,6 @@
 # Build the display layers for the web map: merge habitat fragments, drop
-# redundant vertices and transform to WGS 84 (EPSG:4326). Every area on the
+# redundant vertices and transform habitat, site outlines and NDOP records to
+# WGS 84 (EPSG:4326). Every area on the
 # page comes from the unsimplified EPSG:5514 geometries (02_process.R).
 
 library(tidyverse)
@@ -22,6 +23,7 @@ web_gpkg <- file.path(proc_dir, "web_layers.gpkg")
 
 habitat <- st_read(file.path(proc_dir, "habitat_in_sites.gpkg"), quiet = TRUE)
 sites <- st_read(file.path(proc_dir, "sites.gpkg"), quiet = TRUE)
+occurrences <- st_read(file.path(proc_dir, "occurrences_in_sites.gpkg"), quiet = TRUE)
 
 n_vertices <- \(x) nrow(st_coordinates(x))
 n_parts <- \(x) lengths(st_geometry(x))
@@ -86,6 +88,11 @@ sites_web <- sites_merged |>
   simplify_display() |>
   st_transform(4326)
 
+# NDOP records: points, only transformed
+occurrences_web <- occurrences |>
+  select(-x, -y) |>
+  st_transform(4326)
+
 # Zoom bounds from the unsimplified outlines
 sites_4326 <- st_transform(sites_merged, 4326)
 site_bounds <- st_geometry(sites_4326) |>
@@ -103,6 +110,7 @@ max_offset_m <- ceiling(10 * (simplify_tol_m + rounding_m)) / 10
 
 st_write(patches_web, web_gpkg, layer = "habitat_web", delete_dsn = TRUE, quiet = TRUE)
 st_write(sites_web, web_gpkg, layer = "sites_web", quiet = TRUE)
+st_write(occurrences_web, web_gpkg, layer = "occurrences_web", quiet = TRUE)
 write_csv(site_bounds, file.path(proc_dir, "site_bounds.csv"))
 write_yaml(
   list(
@@ -113,7 +121,8 @@ write_yaml(
     n_parts = sum(n_parts(patches_web)),
     n_vertices = n_vertices(patches_web),
     n_vertices_unsimplified = n_vertices(patches),
-    merge_area_diff_ha = area_diff
+    merge_area_diff_ha = area_diff,
+    n_occurrences = nrow(occurrences_web)
   ),
   file.path(proc_dir, "web_metadata.yml")
 )
