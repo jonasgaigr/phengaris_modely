@@ -1,0 +1,785 @@
+species,site_code,site_name,kves,p_class_lower,p_class_upper,area_ha,n_fragments,share_of_site_habitat_pct
+nausithous,CZ0213063,Rakovník - za koupalištěm,Degradovaný travní porost,0.7,0.8,0.34663068837523464,1,5.7834827520650105
+nausithous,CZ0213063,Rakovník - za koupalištěm,Degradovaný travní porost,0.8,0.9,0.9206673049692996,1,15.361200428151554
+nausithous,CZ0213063,Rakovník - za koupalištěm,Degradovaný travní porost,0.9,1,0.4498665115102427,3,7.5059574853183495
+nausithous,CZ0213063,Rakovník - za koupalištěm,Dopravní síť,0.7,0.8,1.2157967249549985e-5,1,2.0285391988093622e-4
+nausithous,CZ0213063,Rakovník - za koupalištěm,Dopravní síť,0.9,1,0.00888651544716231,1,0.1482702211264872
+nausithous,CZ0213063,Rakovník - za koupalištěm,Mezofilní louky,0.9,1,3.709849240436811,3,61.898296412813274
+nausithous,CZ0213063,Rakovník - za koupalištěm,"Ovocný sad, zahrada",0.7,0.8,0.017366684671747498,1,0.28976061447529783
+nausithous,CZ0213063,Rakovník - za koupalištěm,Rozptýlená zeleň,0.7,0.8,0.012622456088848412,1,0.21060384878423377
+nausithous,CZ0213063,Rakovník - za koupalištěm,Rozptýlená zeleň,0.8,0.9,0.38820892278849517,4,6.477209561764267
+nausithous,CZ0213063,Rakovník - za koupalištěm,Rozptýlená zeleň,0.9,1,0.1393488783951849,2,2.3250158215816428
+nausithous,CZ0213777,Bohostice,Degradovaný travní porost,0.7,0.8,0.04389158926662058,1,1.6100678494924308
+nausithous,CZ0213777,Bohostice,Degradovaný travní porost,0.8,0.9,0.6748620560214273,2,24.75585225775353
+nausithous,CZ0213777,Bohostice,Degradovaný travní porost,0.9,1,0.02613304548871238,1,0.9586341495886015
+nausithous,CZ0213777,Bohostice,Mezofilní louky,0.9,1,1.9204469163351758,5,70.44743396885018
+nausithous,CZ0213777,Bohostice,Orná půda,0.7,0.8,0.007853675434883916,1,0.2880950662607135
+nausithous,CZ0213777,Bohostice,Rozptýlená zeleň,0.7,0.8,0.037917860691354145,4,1.3909345603739787
+nausithous,CZ0213777,Bohostice,Rozptýlená zeleň,0.9,1,0.01496564194378443,1,0.5489821476805677
+nausithous,CZ0214004,Černý Orel,Aluviální a vlhké louky,0.8,0.9,6.863656608255091,6,11.934038647596253
+nausithous,CZ0214004,Černý Orel,Degradovaný travní porost,0.7,0.8,1.1010498537571796,11,1.9144272881986273
+nausithous,CZ0214004,Černý Orel,Degradovaný travní porost,0.8,0.9,3.0216599060150795,11,5.253847643675096
+nausithous,CZ0214004,Černý Orel,Degradovaný travní porost,0.9,1,2.1778391111165285,4,3.786671974389278
+nausithous,CZ0214004,Černý Orel,Mezofilní louky,0.7,0.8,28.009649019008236,10,48.701188444715896
+nausithous,CZ0214004,Černý Orel,Mezofilní louky,0.8,0.9,5.480978477384985,5,9.52993611263786
+nausithous,CZ0214004,Černý Orel,Mezofilní louky,0.9,1,6.311608017414622,2,10.974175764811957
+nausithous,CZ0214004,Černý Orel,Rozptýlená zeleň,0.7,0.8,0.41281198464936897,3,0.7177681606435903
+nausithous,CZ0214004,Černý Orel,Rozptýlená zeleň,0.8,0.9,3.7647059577814534,17,6.545803346712236
+nausithous,CZ0214004,Černý Orel,Rozptýlená zeleň,0.9,1,0.2737983033562021,2,0.47606104448309244
+nausithous,CZ0214004,Černý Orel,Souvislá zástavba,0.7,0.8,0.08124028933242662,4,0.1412548453355037
+nausithous,CZ0214004,Černý Orel,Souvislá zástavba,0.8,0.9,0.014278663954278455,1,0.024826726800616993
+nausithous,CZ0214040,Louky u Drahlína,Degradovaný travní porost,0.7,0.8,0.11595886836762075,2,8.11106674684342
+nausithous,CZ0214040,Louky u Drahlína,Degradovaný travní porost,0.9,1,0.12474767379395417,1,8.725824276315098
+nausithous,CZ0214040,Louky u Drahlína,Mezofilní louky,0.7,0.8,0.044077028825072195,2,3.083090822077479
+nausithous,CZ0214040,Louky u Drahlína,Mezofilní louky,0.9,1,1.0767562972484157,1,75.31672497335765
+nausithous,CZ0214040,Louky u Drahlína,Rozptýlená zeleň,0.7,0.8,0.011190153436867696,1,0.7827265194250316
+nausithous,CZ0214040,Louky u Drahlína,Rozptýlená zeleň,0.8,0.9,0.006512843364011496,1,0.4555590096805751
+nausithous,CZ0214040,Louky u Drahlína,Souvislá zástavba,0.9,1,0.050394838447985243,1,3.5250076523007574
+nausithous,CZ0313114,Onšovice - Mlýny,Degradovaný travní porost,0.7,0.8,1.2442587495858812,2,19.983598794542488
+nausithous,CZ0313114,Onšovice - Mlýny,Degradovaný travní porost,0.8,0.9,2.8403291351599793,2,45.617519587768975
+nausithous,CZ0313114,Onšovice - Mlýny,Degradovaný travní porost,0.9,1,0.22264377036631341,1,3.575802687813497
+nausithous,CZ0313114,Onšovice - Mlýny,Mezofilní louky,0.9,1,1.111199634178914,1,17.846583499986966
+nausithous,CZ0313114,Onšovice - Mlýny,"Ovocný sad, zahrada",0.7,0.8,0.05124382125027478,1,0.823008851579758
+nausithous,CZ0313114,Onšovice - Mlýny,"Ovocný sad, zahrada",0.9,1,0.012502075248997426,1,0.20079139966529946
+nausithous,CZ0313114,Onšovice - Mlýny,Rozptýlená zeleň,0.7,0.8,0.5951625882445369,4,9.558695395920463
+nausithous,CZ0313114,Onšovice - Mlýny,Rozptýlená zeleň,0.8,0.9,0.11397954912979913,2,1.830585142640813
+nausithous,CZ0313114,Onšovice - Mlýny,Rozptýlená zeleň,0.9,1,0.03508044785996899,1,0.5634146400817415
+nausithous,CZ0313141,Žofina Huť,Degradovaný travní porost,0.7,0.8,3.429894312778808,3,43.117382585786245
+nausithous,CZ0313141,Žofina Huť,Degradovaný travní porost,0.8,0.9,0.08681944353173604,2,1.0914118107651263
+nausithous,CZ0313141,Žofina Huť,Degradovaný travní porost,0.9,1,0.055603134196507746,1,0.6989899371497775
+nausithous,CZ0313141,Žofina Huť,Mezofilní louky,0.8,0.9,7.418301636989782e-5,1,9.325586174103208e-4
+nausithous,CZ0313141,Žofina Huť,Mezofilní louky,0.9,1,3.7557948050232257,2,47.21429488907353
+nausithous,CZ0313141,Žofina Huť,"Ovocný sad, zahrada",0.9,1,0.022816857203491966,1,0.28683191717681966
+nausithous,CZ0313141,Žofina Huť,Rozptýlená zeleň,0.8,0.9,0.13224213584931366,2,1.662422875285863
+nausithous,CZ0313141,Žofina Huť,Rozptýlená zeleň,0.9,1,0.47153834362632846,5,5.927733426145224
+nausithous,CZ0314123,Boletice,Aluviální a vlhké louky,0.8,0.9,0.017154367501113304,2,0.0012752188217432564
+nausithous,CZ0314123,Boletice,Degradovaný travní porost,0.7,0.8,114.87482515483795,96,8.539547679178957
+nausithous,CZ0314123,Boletice,Degradovaný travní porost,0.8,0.9,86.09223506186336,122,6.399911774637439
+nausithous,CZ0314123,Boletice,Degradovaný travní porost,0.9,1,64.32645236819545,78,4.781890255678048
+nausithous,CZ0314123,Boletice,Dopravní síť,0.7,0.8,0.688884360205161,25,0.05121018318402995
+nausithous,CZ0314123,Boletice,Dopravní síť,0.8,0.9,0.8546619226993196,55,0.06353373098615965
+nausithous,CZ0314123,Boletice,Dopravní síť,0.9,1,1.0633837427786357,69,0.07904966262609796
+nausithous,CZ0314123,Boletice,Mezofilní louky,0.7,0.8,273.135798105443,161,20.304328364967233
+nausithous,CZ0314123,Boletice,Mezofilní louky,0.8,0.9,407.7447930268551,185,30.310871823278177
+nausithous,CZ0314123,Boletice,Mezofilní louky,0.9,1,294.1925173731597,113,21.869639632352264
+nausithous,CZ0314123,Boletice,"Ovocný sad, zahrada",0.7,0.8,0.017625104682927488,1,0.0013102124124020123
+nausithous,CZ0314123,Boletice,Rozptýlená zeleň,0.7,0.8,56.83257827535817,111,4.224811757135909
+nausithous,CZ0314123,Boletice,Rozptýlená zeleň,0.8,0.9,32.87880943632024,103,2.444140049289738
+nausithous,CZ0314123,Boletice,Rozptýlená zeleň,0.9,1,12.489998544056954,54,0.9284796554518036
+nausithous,CZ0314124,Blanský les,Aluviální a vlhké louky,0.7,0.8,0.8794261703348224,2,0.0959787760672646
+nausithous,CZ0314124,Blanský les,Aluviální a vlhké louky,0.8,0.9,3.7449728600851726,3,0.40871868911889453
+nausithous,CZ0314124,Blanský les,Aluviální a vlhké louky,0.9,1,2.6344005978676197,2,0.28751310068238983
+nausithous,CZ0314124,Blanský les,Degradovaný travní porost,0.7,0.8,252.39480800176355,255,27.54585384753622
+nausithous,CZ0314124,Blanský les,Degradovaný travní porost,0.8,0.9,112.2730535615089,176,12.25325175627353
+nausithous,CZ0314124,Blanský les,Degradovaný travní porost,0.9,1,31.615956461702414,68,3.450500914971428
+nausithous,CZ0314124,Blanský les,Dopravní síť,0.7,0.8,1.168405191791947,52,0.12751735625076174
+nausithous,CZ0314124,Blanský les,Dopravní síť,0.8,0.9,0.9716790006248582,49,0.10604706154551871
+nausithous,CZ0314124,Blanský les,Dopravní síť,0.9,1,0.32095400878885194,32,0.035028264994329025
+nausithous,CZ0314124,Blanský les,Mezofilní louky,0.7,0.8,155.75471018691738,99,16.998750952294582
+nausithous,CZ0314124,Blanský les,Mezofilní louky,0.8,0.9,127.06535373812636,99,13.867653185367672
+nausithous,CZ0314124,Blanský les,Mezofilní louky,0.9,1,79.53948319642872,77,8.680776742531405
+nausithous,CZ0314124,Blanský les,Orná půda,0.7,0.8,0.3755386511343298,2,0.04098552137480919
+nausithous,CZ0314124,Blanský les,Orná půda,0.8,0.9,1.354149500661512,4,0.14778911075173753
+nausithous,CZ0314124,Blanský les,"Ovocný sad, zahrada",0.7,0.8,7.3474130771579285,92,0.8018816566918225
+nausithous,CZ0314124,Blanský les,"Ovocný sad, zahrada",0.8,0.9,4.852675522944087,52,0.5296110953423424
+nausithous,CZ0314124,Blanský les,"Ovocný sad, zahrada",0.9,1,1.63264805334607,24,0.17818387397898108
+nausithous,CZ0314124,Blanský les,Rozptýlená zeleň,0.7,0.8,26.257330589538242,248,2.86567143188147
+nausithous,CZ0314124,Blanský les,Rozptýlená zeleň,0.8,0.9,15.392436599440469,170,1.6798990925466737
+nausithous,CZ0314124,Blanský les,Rozptýlená zeleň,0.9,1,6.232755203571922,77,0.6802301729751248
+nausithous,CZ0314124,Blanský les,Souvislá zástavba,0.7,0.8,62.17194706628377,114,6.785319321198734
+nausithous,CZ0314124,Blanský les,Souvislá zástavba,0.8,0.9,20.45371241985501,65,2.232276398304222
+nausithous,CZ0314124,Blanský les,Souvislá zástavba,0.9,1,1.8376894874958802,21,0.20056167732008795
+nausithous,CZ0317017,Strážkovice,Degradovaný travní porost,0.7,0.8,12.499838091260964,1,99.29017581007764
+nausithous,CZ0317017,Strážkovice,Rozptýlená zeleň,0.7,0.8,0.04782189465258271,1,0.37986446648021777
+nausithous,CZ0317017,Strážkovice,Rozptýlená zeleň,0.9,1,0.041539287104830146,1,0.32995972344213054
+nausithous,CZ0323150,Kamenec,Degradovaný travní porost,0.8,0.9,0.006699122620699928,2,0.24565754290581127
+nausithous,CZ0323150,Kamenec,Mezofilní louky,0.7,0.8,1.0521648568540811,1,38.582997819438766
+nausithous,CZ0323150,Kamenec,Mezofilní louky,0.9,1,1.614985641149257,2,59.22169616764558
+nausithous,CZ0323150,Kamenec,Rozptýlená zeleň,0.7,0.8,0.0531672425497789,1,1.9496484700098493
+nausithous,CZ0414127,Hradiště,Degradovaný travní porost,0.7,0.8,51.19682441863053,113,4.188086770506612
+nausithous,CZ0414127,Hradiště,Degradovaný travní porost,0.8,0.9,22.99367337448478,62,1.8809662583288353
+nausithous,CZ0414127,Hradiště,Degradovaný travní porost,0.9,1,4.127638845376823,10,0.3376558963969873
+nausithous,CZ0414127,Hradiště,Dopravní síť,0.7,0.8,2.0413813708979274,109,0.16699243381011541
+nausithous,CZ0414127,Hradiště,Dopravní síť,0.8,0.9,1.9512247538765373,89,0.1596172940566523
+nausithous,CZ0414127,Hradiště,Dopravní síť,0.9,1,0.3949693823822858,11,0.03230993453001095
+nausithous,CZ0414127,Hradiště,Mezofilní louky,0.7,0.8,840.4035858390073,282,68.74807528995589
+nausithous,CZ0414127,Hradiště,Mezofilní louky,0.8,0.9,231.30265888842916,141,18.92140023671308
+nausithous,CZ0414127,Hradiště,Mezofilní louky,0.9,1,47.29214941178355,33,3.868670128458931
+nausithous,CZ0414127,Hradiště,Orná půda,0.7,0.8,0.5606249051559716,3,0.045861159850489296
+nausithous,CZ0414127,Hradiště,"Ovocný sad, zahrada",0.7,0.8,1.487072128590724,15,0.12164791819145628
+nausithous,CZ0414127,Hradiště,"Ovocný sad, zahrada",0.8,0.9,1.1361311040767819,18,0.09293966375019005
+nausithous,CZ0414127,Hradiště,"Ovocný sad, zahrada",0.9,1,0.7627457580077571,6,0.062395382030957874
+nausithous,CZ0414127,Hradiště,Rozptýlená zeleň,0.7,0.8,13.608054841675292,64,1.113188466314513
+nausithous,CZ0414127,Hradiště,Rozptýlená zeleň,0.8,0.9,2.8636607234993603,36,0.23425788078650273
+nausithous,CZ0414127,Hradiště,Rozptýlená zeleň,0.9,1,0.020777433389890937,2,0.0016996697528298028
+nausithous,CZ0414127,Hradiště,Souvislá zástavba,0.7,0.8,0.06359381611705948,5,0.005202205859255737
+nausithous,CZ0414127,Hradiště,Souvislá zástavba,0.8,0.9,0.2326719190491305,4,0.019033410706689187
+nausithous,CZ0424030,Bezručovo údolí,Degradovaný travní porost,0.7,0.8,0.4519308667937352,6,3.810152585359057
+nausithous,CZ0424030,Bezručovo údolí,Degradovaný travní porost,0.8,0.9,0.28434393089901006,4,2.3972555163851856
+nausithous,CZ0424030,Bezručovo údolí,Degradovaný travní porost,0.9,1,0.06960227381419391,1,0.58680498059686
+nausithous,CZ0424030,Bezručovo údolí,Dopravní síť,0.7,0.8,0.036947371148401,4,0.3114970276362017
+nausithous,CZ0424030,Bezručovo údolí,Dopravní síť,0.8,0.9,0.058924453597761745,2,0.496782087068309
+nausithous,CZ0424030,Bezručovo údolí,Mezofilní louky,0.7,0.8,4.881246634608561,6,41.15296354191584
+nausithous,CZ0424030,Bezručovo údolí,Mezofilní louky,0.8,0.9,5.673055269322558,4,47.828568016708445
+nausithous,CZ0424030,Bezručovo údolí,Rozptýlená zeleň,0.7,0.8,0.1495200720855835,3,1.2605784005454346
+nausithous,CZ0424030,Bezručovo údolí,Rozptýlená zeleň,0.8,0.9,0.25565664209092503,2,2.155397843784669
+nausithous,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.7,0.8,3.974672251580134,26,2.6062836926164983
+nausithous,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.8,0.9,3.1128281782176597,19,2.0411527807306666
+nausithous,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.9,1,0.38965889351167715,4,0.25550826723857184
+nausithous,CZ0424127,Východní Krušnohoří,Dopravní síť,0.7,0.8,0.6202958738893504,4,0.406742221342252
+nausithous,CZ0424127,Východní Krušnohoří,Dopravní síť,0.8,0.9,0.634573491328978,7,0.4161043823323877
+nausithous,CZ0424127,Východní Krušnohoří,Dopravní síť,0.9,1,0.08731123012012613,4,0.05725197471411773
+nausithous,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.7,0.8,105.12494960860533,47,68.93283886315811
+nausithous,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.8,0.9,29.774718237488923,37,19.523965168138822
+nausithous,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.9,1,6.209852552811153,13,4.071942645210665
+nausithous,CZ0424127,Východní Krušnohoří,"Ovocný sad, zahrada",0.7,0.8,0.1362387738846257,5,0.08933488655232023
+nausithous,CZ0424127,Východní Krušnohoří,"Ovocný sad, zahrada",0.8,0.9,0.18942017840304579,8,0.12420715238296748
+nausithous,CZ0424127,Východní Krušnohoří,"Ovocný sad, zahrada",0.9,1,0.032241922779995366,2,0.021141767733602563
+nausithous,CZ0424127,Východní Krušnohoří,Rozptýlená zeleň,0.7,0.8,1.2292881239060436,15,0.8060723974384929
+nausithous,CZ0424127,Východní Krušnohoří,Rozptýlená zeleň,0.8,0.9,0.5374555270509438,12,0.3524219072660913
+nausithous,CZ0424127,Východní Krušnohoří,Rozptýlená zeleň,0.9,1,0.2117056317621842,2,0.13882023492062764
+nausithous,CZ0424127,Východní Krušnohoří,Souvislá zástavba,0.7,0.8,0.16171927595281232,9,0.10604303575722503
+nausithous,CZ0424127,Východní Krušnohoří,Souvislá zástavba,0.8,0.9,0.07650887437263883,3,0.050168622466564325
+nausithous,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.7,0.8,0.00332827890215267,1,0.0013606650767835624
+nausithous,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.8,0.9,7.016728115230293,4,2.8685747740383523
+nausithous,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.9,1,38.85315828285892,70,15.883925942635784
+nausithous,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.7,0.8,13.171516593137703,40,5.38477187863254
+nausithous,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.8,0.9,18.322681489791655,77,7.4906681648774045
+nausithous,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.9,1,40.196646238624254,207,16.43316992014827
+nausithous,CZ0513506,Horní Ploučnice,Dopravní síť,0.7,0.8,0.04545085706613318,5,0.018581193384896215
+nausithous,CZ0513506,Horní Ploučnice,Dopravní síť,0.8,0.9,0.18942234631708088,28,0.07743953525930525
+nausithous,CZ0513506,Horní Ploučnice,Dopravní síť,0.9,1,0.40474022695402856,69,0.1654656680453092
+nausithous,CZ0513506,Horní Ploučnice,Mezofilní louky,0.7,0.8,4.351481210006366,7,1.7789700589412762
+nausithous,CZ0513506,Horní Ploučnice,Mezofilní louky,0.8,0.9,34.999813451671386,15,14.308603713116442
+nausithous,CZ0513506,Horní Ploučnice,Mezofilní louky,0.9,1,65.04238097121747,89,26.59058898013222
+nausithous,CZ0513506,Horní Ploučnice,"Ovocný sad, zahrada",0.7,0.8,0.2853113808424332,8,0.11664083549912369
+nausithous,CZ0513506,Horní Ploučnice,"Ovocný sad, zahrada",0.8,0.9,0.4703013820965681,23,0.1922683419853883
+nausithous,CZ0513506,Horní Ploučnice,"Ovocný sad, zahrada",0.9,1,1.7601119439058195,82,0.7195679580077514
+nausithous,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.7,0.8,0.7629728879020214,16,0.3119181395614183
+nausithous,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.8,0.9,6.785543376456184,88,2.7740619613856
+nausithous,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.9,1,10.03785422309538,198,4.10366982117287
+nausithous,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.7,0.8,0.4831064315895812,17,0.19750329499379124
+nausithous,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.8,0.9,0.6453777131629843,29,0.2638429474967814
+nausithous,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.9,1,0.7788431367306035,52,0.31840620560869276
+nausithous,CZ0514113,Podtrosecká údolí,Degradovaný travní porost,0.7,0.8,2.2812052795838653,14,7.526344427149277
+nausithous,CZ0514113,Podtrosecká údolí,Degradovaný travní porost,0.8,0.9,0.9674211008312101,17,3.1917971066048976
+nausithous,CZ0514113,Podtrosecká údolí,Degradovaný travní porost,0.9,1,3.292392219533062,10,10.862537473169699
+nausithous,CZ0514113,Podtrosecká údolí,Dopravní síť,0.7,0.8,0.17774187031907204,14,0.5864209359497307
+nausithous,CZ0514113,Podtrosecká údolí,Dopravní síť,0.8,0.9,0.18293205470670656,18,0.603544829047539
+nausithous,CZ0514113,Podtrosecká údolí,Dopravní síť,0.9,1,0.15238970261411086,14,0.5027769308134653
+nausithous,CZ0514113,Podtrosecká údolí,Mezofilní louky,0.7,0.8,3.0286710145020628,19,9.992446280776779
+nausithous,CZ0514113,Podtrosecká údolí,Mezofilní louky,0.8,0.9,3.7236200592203597,16,12.28528065069477
+nausithous,CZ0514113,Podtrosecká údolí,Mezofilní louky,0.9,1,14.714077410745617,28,48.545922417473086
+nausithous,CZ0514113,Podtrosecká údolí,"Ovocný sad, zahrada",0.7,0.8,0.3602392192804051,8,1.1885315472206308
+nausithous,CZ0514113,Podtrosecká údolí,"Ovocný sad, zahrada",0.8,0.9,0.17804868070451568,3,0.587433190592196
+nausithous,CZ0514113,Podtrosecká údolí,"Ovocný sad, zahrada",0.9,1,0.10776636243588292,2,0.3555518517392762
+nausithous,CZ0514113,Podtrosecká údolí,Rozptýlená zeleň,0.7,0.8,0.3254645260325506,7,1.0737999528857454
+nausithous,CZ0514113,Podtrosecká údolí,Rozptýlená zeleň,0.8,0.9,0.4268492960729439,8,1.4082971179679342
+nausithous,CZ0514113,Podtrosecká údolí,Rozptýlená zeleň,0.9,1,0.3679038047122973,7,1.2138191924702746
+nausithous,CZ0514113,Podtrosecká údolí,Souvislá zástavba,0.7,0.8,0.022882568447859377,2,0.07549609544469617
+nausithous,CZ0514670,Ronov - Vlhošť,Aluviální a vlhké louky,0.9,1,0.08499968602708541,1,0.028387243571910522
+nausithous,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.7,0.8,2.057254892239254,14,0.6870589580400445
+nausithous,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.8,0.9,5.518481518574506,29,1.8430006784371264
+nausithous,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.9,1,8.944165366276517,26,2.9870722195259836
+nausithous,CZ0514670,Ronov - Vlhošť,Dopravní síť,0.7,0.8,0.01101961654650513,1,0.003680208170122142
+nausithous,CZ0514670,Ronov - Vlhošť,Dopravní síť,0.9,1,0.9138324816514524,26,0.30519154191107234
+nausithous,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.7,0.8,32.86822053886891,8,10.976960337416168
+nausithous,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.8,0.9,119.29852271248416,9,39.84198507426546
+nausithous,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.9,1,119.3723491992628,23,39.86664081783581
+nausithous,CZ0514670,Ronov - Vlhošť,Orná půda,0.8,0.9,0.0010864286942174658,1,3.6283329277753346e-4
+nausithous,CZ0514670,Ronov - Vlhošť,"Ovocný sad, zahrada",0.9,1,0.1402392499608104,3,0.04683553473022251
+nausithous,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.7,0.8,3.379122716283074,14,1.1285215756671976
+nausithous,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.8,0.9,1.555071223784193,13,0.5193452783715481
+nausithous,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.9,1,4.9930547741954685,35,1.6675245364766624
+nausithous,CZ0514670,Ronov - Vlhošť,Souvislá zástavba,0.8,0.9,0.09965485797557048,1,0.03328161383531726
+nausithous,CZ0514670,Ronov - Vlhošť,Souvislá zástavba,0.9,1,0.19208844503719302,2,0.06415154845257633
+nausithous,CZ0523014,Vladivostok,Degradovaný travní porost,0.8,0.9,0.1591645005389648,1,0.7976819739746933
+nausithous,CZ0523014,Vladivostok,Degradovaný travní porost,0.9,1,1.15649050470347,11,5.7959634563676765
+nausithous,CZ0523014,Vladivostok,Dopravní síť,0.9,1,0.12402237539541676,11,0.6215607933141316
+nausithous,CZ0523014,Vladivostok,Mezofilní louky,0.7,0.8,0.32621236229632344,1,1.6348728529938534
+nausithous,CZ0523014,Vladivostok,Mezofilní louky,0.8,0.9,2.8464830380980856e-4,1,0.0014265669800909556
+nausithous,CZ0523014,Vladivostok,Mezofilní louky,0.9,1,16.911090713923564,10,84.7530207871024
+nausithous,CZ0523014,Vladivostok,"Ovocný sad, zahrada",0.9,1,0.003961208372085821,1,0.019852319473694185
+nausithous,CZ0523014,Vladivostok,Rozptýlená zeleň,0.8,0.9,0.07223055398089345,1,0.3619966178743457
+nausithous,CZ0523014,Vladivostok,Rozptýlená zeleň,0.9,1,1.1999212621026158,8,6.013624631919103
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Aluviální a vlhké louky,0.7,0.8,0.0357673829164356,1,0.01785507615774637
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Aluviální a vlhké louky,0.8,0.9,0.8519137598884682,5,0.4252753157304947
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Aluviální a vlhké louky,0.9,1,24.781171765468756,18,12.37075997940341
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Degradovaný travní porost,0.7,0.8,56.05842126863486,29,27.984361712261716
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Degradovaný travní porost,0.8,0.9,29.281872000905544,47,14.617509361505508
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Degradovaný travní porost,0.9,1,6.9308091229405395,45,3.459859644023376
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Dopravní síť,0.7,0.8,0.15520029095122445,12,0.07747597919346633
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Dopravní síť,0.8,0.9,0.13117208253763493,24,0.06548109848997208
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Dopravní síť,0.9,1,0.2078451926568352,32,0.10375631207291831
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Mezofilní louky,0.7,0.8,0.014814273821894312,3,0.007395284914460023
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Mezofilní louky,0.8,0.9,16.50225129041923,7,8.237923200953807
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Mezofilní louky,0.9,1,53.727898077999726,14,26.820964626335613
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Orná půda,0.7,0.8,0.2310893422580939,3,0.115359790647858
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Orná půda,0.8,0.9,0.09666028472420295,1,0.048252810366705014
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,"Ovocný sad, zahrada",0.7,0.8,0.11201324502834105,4,0.055917007552104256
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,"Ovocný sad, zahrada",0.8,0.9,0.11209457693876175,7,0.05595760843861612
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,"Ovocný sad, zahrada",0.9,1,0.055027617272597855,7,0.027469784397618643
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Rozptýlená zeleň,0.7,0.8,3.757355011343743,42,1.8756714752089036
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Rozptýlená zeleň,0.8,0.9,4.3181661794301744,55,2.155628388458396
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Rozptýlená zeleň,0.9,1,2.6600486192648236,55,1.3278961670538307
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Souvislá zástavba,0.7,0.8,0.1928429549127679,8,0.09626719557583598
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Souvislá zástavba,0.8,0.9,0.08910273072727469,13,0.04448007970601618
+nausithous,CZ0523273,Javorka a Cidlina - Sběř,Souvislá zástavba,0.9,1,0.01699139065288655,3,0.008482101551631855
+nausithous,CZ0523275,Kačerov,Degradovaný travní porost,0.8,0.9,0.011290086048236118,1,0.6291133902475778
+nausithous,CZ0523275,Kačerov,Degradovaný travní porost,0.9,1,0.057086387926561295,2,3.181004191821752
+nausithous,CZ0523275,Kačerov,Mezofilní louky,0.8,0.9,1.4681496892499273,2,81.80917527544011
+nausithous,CZ0523275,Kačerov,Rozptýlená zeleň,0.7,0.8,0.02146437211050652,1,1.196051460571995
+nausithous,CZ0523275,Kačerov,Rozptýlená zeleň,0.8,0.9,0.23661219022320584,1,13.18465568191856
+nausithous,CZ0523291,Uhřínov - Benátky,Degradovaný travní porost,0.7,0.8,0.21468136947357636,2,4.802497312866247
+nausithous,CZ0523291,Uhřínov - Benátky,Degradovaný travní porost,0.8,0.9,0.605325474348839,3,13.541342553842787
+nausithous,CZ0523291,Uhřínov - Benátky,Degradovaný travní porost,0.9,1,0.11015745543071535,2,2.4642608019291057
+nausithous,CZ0523291,Uhřínov - Benátky,Dopravní síť,0.7,0.8,0.05106960433969216,3,1.1424449089919821
+nausithous,CZ0523291,Uhřínov - Benátky,Dopravní síť,0.8,0.9,0.014029959903343844,1,0.3138551095544563
+nausithous,CZ0523291,Uhřínov - Benátky,Dopravní síť,0.9,1,0.05172246185376571,3,1.1570495598972328
+nausithous,CZ0523291,Uhřínov - Benátky,Mezofilní louky,0.8,0.9,0.5153144814827479,1,11.527765165046452
+nausithous,CZ0523291,Uhřínov - Benátky,Mezofilní louky,0.9,1,2.897598249848548,5,64.82028618872016
+nausithous,CZ0523291,Uhřínov - Benátky,Rozptýlená zeleň,0.9,1,0.010303745898775378,1,0.2304983991515667
+nausithous,CZ0533308,Bohdanečský rybník,Degradovaný travní porost,0.7,0.8,5.6781223114765975,6,35.43813869444144
+nausithous,CZ0533308,Bohdanečský rybník,Degradovaný travní porost,0.8,0.9,0.05285421559078677,3,0.3298722570499053
+nausithous,CZ0533308,Bohdanečský rybník,Degradovaný travní porost,0.9,1,0.08026203619325534,2,0.500929183009302
+nausithous,CZ0533308,Bohdanečský rybník,Dopravní síť,0.7,0.8,0.04228098271664422,5,0.2638828907614832
+nausithous,CZ0533308,Bohdanečský rybník,Dopravní síť,0.8,0.9,0.02517631266731769,4,0.15712970083714345
+nausithous,CZ0533308,Bohdanečský rybník,Dopravní síť,0.9,1,0.06743883607971365,10,0.42089738390349996
+nausithous,CZ0533308,Bohdanečský rybník,Mezofilní louky,0.7,0.8,0.3263636744385585,1,2.036891867616973
+nausithous,CZ0533308,Bohdanečský rybník,Mezofilní louky,0.8,0.9,1.308623224616074,2,8.167342791996276
+nausithous,CZ0533308,Bohdanečský rybník,Mezofilní louky,0.9,1,7.398103529823665,4,46.17283753043163
+nausithous,CZ0533308,Bohdanečský rybník,Rozptýlená zeleň,0.7,0.8,0.021327904604387004,1,0.13311112370799413
+nausithous,CZ0533308,Bohdanečský rybník,Rozptýlená zeleň,0.8,0.9,0.13828909012683524,3,0.8630860145329398
+nausithous,CZ0533308,Bohdanečský rybník,Rozptýlená zeleň,0.9,1,0.8837892067341062,6,5.515880561711412
+nausithous,CZ0534051,Anenské údolí,Degradovaný travní porost,0.7,0.8,0.2378472620676871,4,1.8192929505809556
+nausithous,CZ0534051,Anenské údolí,Degradovaný travní porost,0.8,0.9,6.620627847297533,3,50.64116133311055
+nausithous,CZ0534051,Anenské údolí,Degradovaný travní porost,0.9,1,1.5374187374647421,6,11.759711029865448
+nausithous,CZ0534051,Anenské údolí,Mezofilní louky,0.7,0.8,1.0734189496362647,3,8.210578129495222
+nausithous,CZ0534051,Anenské údolí,Mezofilní louky,0.8,0.9,1.0070926411834547,2,7.703248407230369
+nausithous,CZ0534051,Anenské údolí,Mezofilní louky,0.9,1,1.999216101664072,2,15.29199759890578
+nausithous,CZ0534051,Anenské údolí,"Ovocný sad, zahrada",0.7,0.8,4.5979359128978105e-10,1,3.516959716432418e-9
+nausithous,CZ0534051,Anenské údolí,"Ovocný sad, zahrada",0.9,1,0.010967855132538722,3,0.08389308900239671
+nausithous,CZ0534051,Anenské údolí,Rozptýlená zeleň,0.7,0.8,0.15083590867712793,5,1.1537433854196653
+nausithous,CZ0534051,Anenské údolí,Rozptýlená zeleň,0.8,0.9,0.41180486552131174,4,3.1498941057587353
+nausithous,CZ0534051,Anenské údolí,Rozptýlená zeleň,0.9,1,0.02382109023498924,2,0.1822074433942219
+nausithous,CZ0534051,Anenské údolí,Souvislá zástavba,0.7,0.8,5.81021343532484e-6,1,4.4442304075163444e-05
+nausithous,CZ0534051,Anenské údolí,Souvislá zástavba,0.8,0.9,5.527628676733002e-4,1,0.0042280814156051205
+nausithous,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.7,0.8,0.22868263713126363,3,1.5125015123647239
+nausithous,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.8,0.9,0.10874475367814884,3,0.7192352093854859
+nausithous,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.9,1,0.7368244537395716,5,4.873339378138802
+nausithous,CZ0534055,Ratajské rybníky,Mezofilní louky,0.7,0.8,0.07647820265643532,1,0.5058250098558983
+nausithous,CZ0534055,Ratajské rybníky,Mezofilní louky,0.8,0.9,2.1603812228007127,3,14.288709924640413
+nausithous,CZ0534055,Ratajské rybníky,Mezofilní louky,0.9,1,11.171561447910337,9,73.88844119259025
+nausithous,CZ0534055,Ratajské rybníky,Rozptýlená zeleň,0.7,0.8,0.0559995859323768,3,0.37037992685863946
+nausithous,CZ0534055,Ratajské rybníky,Rozptýlená zeleň,0.8,0.9,0.023590458288160154,1,0.15602672894548847
+nausithous,CZ0534055,Ratajské rybníky,Rozptýlená zeleň,0.9,1,0.5572353184784162,10,3.685541117220305
+nausithous,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.7,0.8,5.328709615406178,8,7.379785478476442
+nausithous,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.8,0.9,5.870741699417493,9,8.13045136030459
+nausithous,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.9,1,10.208145161011045,6,14.137366615663588
+nausithous,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.7,0.8,3.266564834973086,19,4.523899681817934
+nausithous,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.8,0.9,10.528881714435277,19,14.58155801099379
+nausithous,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.9,1,0.9261337253029488,9,1.282612247692732
+nausithous,CZ0537011,Louky u Přelouče,Dopravní síť,0.7,0.8,0.04917873873338467,8,0.06810814777842893
+nausithous,CZ0537011,Louky u Přelouče,Dopravní síť,0.8,0.9,0.011531802018595364,5,0.01597051279196202
+nausithous,CZ0537011,Louky u Přelouče,Dopravní síť,0.9,1,0.04781737573556603,5,0.06622278197557284
+nausithous,CZ0537011,Louky u Přelouče,Mezofilní louky,0.7,0.8,2.143561350133975,8,2.9686404525040477
+nausithous,CZ0537011,Louky u Přelouče,Mezofilní louky,0.8,0.9,19.987657141484494,14,27.681114672684178
+nausithous,CZ0537011,Louky u Přelouče,Mezofilní louky,0.9,1,10.271988798763582,7,14.225784334921006
+nausithous,CZ0537011,Louky u Přelouče,Orná půda,0.7,0.8,0.0029077115857275206,2,0.00402692007721911
+nausithous,CZ0537011,Louky u Přelouče,Orná půda,0.8,0.9,0.2140854613423173,2,0.29648918646255323
+nausithous,CZ0537011,Louky u Přelouče,"Ovocný sad, zahrada",0.9,1,0.018678634671581675,2,0.02586823581239525
+nausithous,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.7,0.8,1.4657505816822356,17,2.0299332556034666
+nausithous,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.8,0.9,1.0568250636740089,15,1.4636080441769215
+nausithous,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.9,1,0.8076768309753387,15,1.1185600602631716
+nausithous,CZ0613009,Niva Fryšávky,Degradovaný travní porost,0.7,0.8,0.5358813394176064,5,1.7920135463577487
+nausithous,CZ0613009,Niva Fryšávky,Degradovaný travní porost,0.8,0.9,0.12895190396059866,5,0.4312215069424826
+nausithous,CZ0613009,Niva Fryšávky,Degradovaný travní porost,0.9,1,1.1202796580393404,8,3.7462702565783093
+nausithous,CZ0613009,Niva Fryšávky,Dopravní síť,0.9,1,0.006316790971672163,2,0.02112365958301352
+nausithous,CZ0613009,Niva Fryšávky,Mezofilní louky,0.8,0.9,5.567545590214784,7,18.61814618973732
+nausithous,CZ0613009,Niva Fryšávky,Mezofilní louky,0.9,1,21.425208914800795,17,71.64695201104513
+nausithous,CZ0613009,Niva Fryšávky,"Ovocný sad, zahrada",0.7,0.8,0.06457696546597873,1,0.2159485475338206
+nausithous,CZ0613009,Niva Fryšávky,"Ovocný sad, zahrada",0.8,0.9,0.12793427567054752,1,0.42781850790745296
+nausithous,CZ0613009,Niva Fryšávky,"Ovocný sad, zahrada",0.9,1,0.17956494584728788,4,0.6004740074715937
+nausithous,CZ0613009,Niva Fryšávky,Rozptýlená zeleň,0.7,0.8,2.3118548654019834e-5,1,7.730956335437774e-5
+nausithous,CZ0613009,Niva Fryšávky,Rozptýlená zeleň,0.8,0.9,1.1776465942148208e-7,1,3.9381081116736676e-7
+nausithous,CZ0613009,Niva Fryšávky,Rozptýlená zeleň,0.9,1,0.2457538557267886,8,0.8218129763777026
+nausithous,CZ0613009,Niva Fryšávky,Souvislá zástavba,0.9,1,0.5018290711640948,2,1.678141087091264
+nausithous,CZ0613010,Údolí Svratky u Krásného,Aluviální a vlhké louky,0.7,0.8,0.0017213340584188701,1,0.0020310601583156808
+nausithous,CZ0613010,Údolí Svratky u Krásného,Aluviální a vlhké louky,0.8,0.9,3.1103387133503104,3,3.669993635840453
+nausithous,CZ0613010,Údolí Svratky u Krásného,Aluviální a vlhké louky,0.9,1,4.879274830955125,12,5.7572210705738
+nausithous,CZ0613010,Údolí Svratky u Krásného,Degradovaný travní porost,0.7,0.8,0.43328040985901867,8,0.5112421807604747
+nausithous,CZ0613010,Údolí Svratky u Krásného,Degradovaný travní porost,0.8,0.9,4.033831223647317,14,4.759653620776833
+nausithous,CZ0613010,Údolí Svratky u Krásného,Degradovaný travní porost,0.9,1,17.341122734496672,28,20.46137605552902
+nausithous,CZ0613010,Údolí Svratky u Krásného,Dopravní síť,0.7,0.8,0.013458662869606633,2,0.015880330610415903
+nausithous,CZ0613010,Údolí Svratky u Krásného,Dopravní síť,0.8,0.9,0.023197783535008787,3,0.02737184782276735
+nausithous,CZ0613010,Údolí Svratky u Krásného,Dopravní síť,0.9,1,0.25314961372611144,26,0.2986997741765433
+nausithous,CZ0613010,Údolí Svratky u Krásného,Mezofilní louky,0.7,0.8,0.01490759794135811,1,0.017589978009668474
+nausithous,CZ0613010,Údolí Svratky u Krásného,Mezofilní louky,0.8,0.9,18.84806073230291,9,22.239463065093936
+nausithous,CZ0613010,Údolí Svratky u Krásného,Mezofilní louky,0.9,1,29.365461485046477,28,34.64929922296231
+nausithous,CZ0613010,Údolí Svratky u Krásného,"Ovocný sad, zahrada",0.7,0.8,0.0562968711955211,3,0.06642657859688295
+nausithous,CZ0613010,Údolí Svratky u Krásného,"Ovocný sad, zahrada",0.8,0.9,0.012486418156465517,1,0.014733146255737054
+nausithous,CZ0613010,Údolí Svratky u Krásného,"Ovocný sad, zahrada",0.9,1,0.21506759720110716,6,0.2537655174388927
+nausithous,CZ0613010,Údolí Svratky u Krásného,Rozptýlená zeleň,0.7,0.8,0.04078258561048997,5,0.04812074935800068
+nausithous,CZ0613010,Údolí Svratky u Krásného,Rozptýlená zeleň,0.8,0.9,1.972154646159476,13,2.3270118361167955
+nausithous,CZ0613010,Údolí Svratky u Krásného,Rozptýlená zeleň,0.9,1,3.805106326779972,64,4.489773394466291
+nausithous,CZ0613010,Údolí Svratky u Krásného,Souvislá zástavba,0.8,0.9,0.21735233207350302,4,0.2564613532349381
+nausithous,CZ0613010,Údolí Svratky u Krásného,Souvislá zástavba,0.9,1,0.11346872797409488,3,0.13388558221791913
+nausithous,CZ0613012,Na Ostrážné,Mezofilní louky,0.7,0.8,0.29959592342930846,1,19.178065825040115
+nausithous,CZ0613012,Na Ostrážné,Mezofilní louky,0.9,1,1.2625841533443192,1,80.82193417495989
+nausithous,CZ0713388,Protivanov,Degradovaný travní porost,0.9,1,0.30944728638052477,2,14.110106985948836
+nausithous,CZ0713388,Protivanov,Mezofilní louky,0.7,0.8,0.48916576049374416,2,22.304869094706486
+nausithous,CZ0713388,Protivanov,Mezofilní louky,0.8,0.9,1.3381836989714764,3,61.018195958976186
+nausithous,CZ0713388,Protivanov,Rozptýlená zeleň,0.8,0.9,0.0016181872257497163,1,0.07378573309105363
+nausithous,CZ0713388,Protivanov,Rozptýlená zeleň,0.9,1,0.015486710304929876,1,0.7061594942999296
+nausithous,CZ0713388,Protivanov,Souvislá zástavba,0.9,1,0.03918793906741776,1,1.7868827329775174
+nausithous,CZ0713395,Vidnavské mokřiny,Degradovaný travní porost,0.7,0.8,0.23076517245573633,1,7.6042025271474145
+nausithous,CZ0713395,Vidnavské mokřiny,Degradovaný travní porost,0.8,0.9,0.007955173252522946,1,0.26213985371789056
+nausithous,CZ0713395,Vidnavské mokřiny,Degradovaný travní porost,0.9,1,0.293234217853332,1,9.662690243581313
+nausithous,CZ0713395,Vidnavské mokřiny,Dopravní síť,0.8,0.9,0.014094938557164278,2,0.4644581600238431
+nausithous,CZ0713395,Vidnavské mokřiny,Mezofilní louky,0.7,0.8,0.5271497020124575,1,17.370702231928114
+nausithous,CZ0713395,Vidnavské mokřiny,Mezofilní louky,0.8,0.9,1.9615065606336284,2,64.63580698360143
+nausithous,CZ0714073,Litovelské Pomoraví,Aluviální a vlhké louky,0.7,0.8,1.006690929984057,6,0.07464073760497644
+nausithous,CZ0714073,Litovelské Pomoraví,Aluviální a vlhké louky,0.8,0.9,67.59871816449309,13,5.012082690591631
+nausithous,CZ0714073,Litovelské Pomoraví,Aluviální a vlhké louky,0.9,1,206.50345435647017,52,15.31112448920805
+nausithous,CZ0714073,Litovelské Pomoraví,Degradovaný travní porost,0.7,0.8,101.34354855140333,158,7.514081025347356
+nausithous,CZ0714073,Litovelské Pomoraví,Degradovaný travní porost,0.8,0.9,576.385264274921,199,42.73587849927358
+nausithous,CZ0714073,Litovelské Pomoraví,Degradovaný travní porost,0.9,1,181.32198591196658,183,13.444053551453644
+nausithous,CZ0714073,Litovelské Pomoraví,Dopravní síť,0.7,0.8,2.6129011676448304,90,0.19373261905220807
+nausithous,CZ0714073,Litovelské Pomoraví,Dopravní síť,0.8,0.9,3.016973880178706,119,0.22369244526227405
+nausithous,CZ0714073,Litovelské Pomoraví,Dopravní síť,0.9,1,4.073735654737313,157,0.3020456676629641
+nausithous,CZ0714073,Litovelské Pomoraví,Mezofilní louky,0.7,0.8,6.851235768647055,7,0.5079824164955105
+nausithous,CZ0714073,Litovelské Pomoraví,Mezofilní louky,0.8,0.9,10.7316534602555,7,0.7956945931827896
+nausithous,CZ0714073,Litovelské Pomoraví,Mezofilní louky,0.9,1,45.249940051262875,29,3.3550405605230953
+nausithous,CZ0714073,Litovelské Pomoraví,Orná půda,0.7,0.8,33.79438541280569,20,2.505672574360654
+nausithous,CZ0714073,Litovelské Pomoraví,Orná půda,0.8,0.9,7.283543137766951,10,0.5400356911819992
+nausithous,CZ0714073,Litovelské Pomoraví,Orná půda,0.9,1,1.1659672962717713,3,0.08645022660369393
+nausithous,CZ0714073,Litovelské Pomoraví,"Ovocný sad, zahrada",0.7,0.8,3.5563634958288555,31,0.2636852946755786
+nausithous,CZ0714073,Litovelské Pomoraví,"Ovocný sad, zahrada",0.8,0.9,1.9783804814140975,24,0.1466863105624437
+nausithous,CZ0714073,Litovelské Pomoraví,"Ovocný sad, zahrada",0.9,1,0.6427624914936899,11,0.04765739418220567
+nausithous,CZ0714073,Litovelské Pomoraví,Rozptýlená zeleň,0.7,0.8,21.43401889591391,141,1.589217636296131
+nausithous,CZ0714073,Litovelské Pomoraví,Rozptýlená zeleň,0.8,0.9,36.273635826908844,190,2.68949570627169
+nausithous,CZ0714073,Litovelské Pomoraví,Rozptýlená zeleň,0.9,1,26.59305894903105,170,1.9717328089563027
+nausithous,CZ0714073,Litovelské Pomoraví,Souvislá zástavba,0.7,0.8,2.289598870748579,26,0.16976148631328342
+nausithous,CZ0714073,Litovelské Pomoraví,Souvislá zástavba,0.8,0.9,5.400685054564426,30,0.4004318545427297
+nausithous,CZ0714073,Litovelské Pomoraví,Souvislá zástavba,0.9,1,1.606639654373041,13,0.11912372039520353
+nausithous,CZ0714085,Morava - Chropyňský luh,Aluviální a vlhké louky,0.7,0.8,0.1995070393946662,1,0.0961181517703299
+nausithous,CZ0714085,Morava - Chropyňský luh,Aluviální a vlhké louky,0.8,0.9,41.911223396303285,14,20.191915751488917
+nausithous,CZ0714085,Morava - Chropyňský luh,Aluviální a vlhké louky,0.9,1,99.8528637941211,26,48.10693770999844
+nausithous,CZ0714085,Morava - Chropyňský luh,Degradovaný travní porost,0.7,0.8,22.568823829063813,43,10.873168388753047
+nausithous,CZ0714085,Morava - Chropyňský luh,Degradovaný travní porost,0.8,0.9,16.4091526852341,48,7.905572820925808
+nausithous,CZ0714085,Morava - Chropyňský luh,Degradovaný travní porost,0.9,1,2.74784068475713,21,1.3238498690549674
+nausithous,CZ0714085,Morava - Chropyňský luh,Dopravní síť,0.7,0.8,0.11204795062685008,6,0.05398226527035485
+nausithous,CZ0714085,Morava - Chropyňský luh,Dopravní síť,0.8,0.9,0.15288313542806792,12,0.07365576903343991
+nausithous,CZ0714085,Morava - Chropyňský luh,Dopravní síť,0.9,1,1.0110683946889512,56,0.4871107591279036
+nausithous,CZ0714085,Morava - Chropyňský luh,Mezofilní louky,0.7,0.8,1.6167336279754294,2,0.7789070936917173
+nausithous,CZ0714085,Morava - Chropyňský luh,Mezofilní louky,0.8,0.9,1.0467533747961422,9,0.5043030063000897
+nausithous,CZ0714085,Morava - Chropyňský luh,Mezofilní louky,0.9,1,2.9442606539695264,11,1.4184807375634867
+nausithous,CZ0714085,Morava - Chropyňský luh,Orná půda,0.7,0.8,1.1158322074179654,6,0.5375836852085009
+nausithous,CZ0714085,Morava - Chropyňský luh,Orná půda,0.8,0.9,3.8711101068153906,6,1.8650166424979153
+nausithous,CZ0714085,Morava - Chropyňský luh,Orná půda,0.9,1,0.004299416755817947,1,0.002071365469175806
+nausithous,CZ0714085,Morava - Chropyňský luh,"Ovocný sad, zahrada",0.7,0.8,0.09994640308986528,6,0.048152002907958916
+nausithous,CZ0714085,Morava - Chropyňský luh,"Ovocný sad, zahrada",0.8,0.9,0.5022451876936525,11,0.24197080625891407
+nausithous,CZ0714085,Morava - Chropyňský luh,Rozptýlená zeleň,0.7,0.8,4.4305125834833925,46,2.1345245872612466
+nausithous,CZ0714085,Morava - Chropyňský luh,Rozptýlená zeleň,0.8,0.9,3.1787335048968135,21,1.5314446567306086
+nausithous,CZ0714085,Morava - Chropyňský luh,Rozptýlená zeleň,0.9,1,0.8443870476169933,15,0.4068073118723287
+nausithous,CZ0714085,Morava - Chropyňský luh,Souvislá zástavba,0.7,0.8,0.22024571721723188,2,0.1061095956237072
+nausithous,CZ0714085,Morava - Chropyňský luh,Souvislá zástavba,0.8,0.9,1.963254079823292,10,0.9458531096483181
+nausithous,CZ0714085,Morava - Chropyňský luh,Souvislá zástavba,0.9,1,0.7606485256875501,3,0.3664639135428334
+nausithous,CZ0723403,Uhliska,Degradovaný travní porost,0.7,0.8,0.04981161406777101,1,0.32065984821796356
+nausithous,CZ0723403,Uhliska,Degradovaný travní porost,0.8,0.9,0.01839353807614534,1,0.11840750873207005
+nausithous,CZ0723403,Uhliska,Degradovaný travní porost,0.9,1,0.07606289800512606,2,0.48965121459742317
+nausithous,CZ0723403,Uhliska,Dopravní síť,0.7,0.8,0.0027109207395464184,1,0.017451420700625837
+nausithous,CZ0723403,Uhliska,Dopravní síť,0.8,0.9,0.016257637659390457,2,0.10465775345384375
+nausithous,CZ0723403,Uhliska,Dopravní síť,0.9,1,0.028504355296958238,2,0.1834954039159997
+nausithous,CZ0723403,Uhliska,Mezofilní louky,0.7,0.8,0.9623167116435595,2,6.1948671302520175
+nausithous,CZ0723403,Uhliska,Mezofilní louky,0.8,0.9,9.136021551335372,4,58.81269536822173
+nausithous,CZ0723403,Uhliska,Mezofilní louky,0.9,1,4.74536014340029,3,30.548025632175666
+nausithous,CZ0723403,Uhliska,Rozptýlená zeleň,0.7,0.8,0.17639711289070548,2,1.1355478537327335
+nausithous,CZ0723403,Uhliska,Rozptýlená zeleň,0.8,0.9,0.32226120469802993,3,2.0745408659999383
+nausithous,CZ0724090,Bílé Karpaty,Aluviální a vlhké louky,0.7,0.8,0.011656702681956814,1,3.733364775773229e-4
+nausithous,CZ0724090,Bílé Karpaty,Aluviální a vlhké louky,0.8,0.9,0.3169262597669265,5,0.010150394730088247
+nausithous,CZ0724090,Bílé Karpaty,Aluviální a vlhké louky,0.9,1,0.9361181752866986,20,0.02998163989363916
+nausithous,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.7,0.8,302.23929872176393,251,9.68000628041082
+nausithous,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.8,0.9,145.22960719655205,366,4.651359090990998
+nausithous,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.9,1,126.6791154637015,455,4.057230937444658
+nausithous,CZ0724090,Bílé Karpaty,Dopravní síť,0.7,0.8,1.2859992392072173,84,0.041187498663399325
+nausithous,CZ0724090,Bílé Karpaty,Dopravní síť,0.8,0.9,1.9432650590655673,123,0.06223816047685612
+nausithous,CZ0724090,Bílé Karpaty,Dopravní síť,0.9,1,5.251171247338107,338,0.1681825324129674
+nausithous,CZ0724090,Bílé Karpaty,Mezofilní louky,0.7,0.8,411.2501984615657,114,13.171366267604073
+nausithous,CZ0724090,Bílé Karpaty,Mezofilní louky,0.8,0.9,853.0851108133165,240,27.32228821772086
+nausithous,CZ0724090,Bílé Karpaty,Mezofilní louky,0.9,1,813.6151639323316,356,26.058159643735706
+nausithous,CZ0724090,Bílé Karpaty,Orná půda,0.7,0.8,22.684321732129636,21,0.7265249018329016
+nausithous,CZ0724090,Bílé Karpaty,Orná půda,0.8,0.9,20.56302777059017,29,0.6585848988050261
+nausithous,CZ0724090,Bílé Karpaty,Orná půda,0.9,1,11.945615272315782,24,0.38258966106799513
+nausithous,CZ0724090,Bílé Karpaty,"Ovocný sad, zahrada",0.7,0.8,8.588876905601547,77,0.27508131053611257
+nausithous,CZ0724090,Bílé Karpaty,"Ovocný sad, zahrada",0.8,0.9,14.823931781119153,149,0.4747752967548889
+nausithous,CZ0724090,Bílé Karpaty,"Ovocný sad, zahrada",0.9,1,15.012111392040723,160,0.48080224236808317
+nausithous,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.7,0.8,68.29007584523521,241,2.1871687959419113
+nausithous,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.8,0.9,128.78139457552928,393,4.124561940036757
+nausithous,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.9,1,132.86143392597856,488,4.255235901707871
+nausithous,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.7,0.8,7.621626277895128,32,0.24410257219689732
+nausithous,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.8,0.9,16.789758850330138,45,0.5377360647842042
+nausithous,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.9,1,12.498973615565266,57,0.40031241340571755
+nausithous,CZ0813448,Jakartovice,Degradovaný travní porost,0.7,0.8,2.191634487258069,5,32.2598176694019
+nausithous,CZ0813448,Jakartovice,Degradovaný travní porost,0.8,0.9,2.478630897422402,3,36.484268378451205
+nausithous,CZ0813448,Jakartovice,Degradovaný travní porost,0.9,1,0.11671226206000111,1,1.7179490082534639
+nausithous,CZ0813448,Jakartovice,Orná půda,0.7,0.8,0.4937098771430232,1,7.267174663847725
+nausithous,CZ0813448,Jakartovice,Orná půda,0.9,1,0.48140117378789005,1,7.085996402467047
+nausithous,CZ0813448,Jakartovice,"Ovocný sad, zahrada",0.7,0.8,0.025412025744489804,1,0.3740529371542311
+nausithous,CZ0813448,Jakartovice,Rozptýlená zeleň,0.7,0.8,0.6402825561124281,7,9.424654812275413
+nausithous,CZ0813448,Jakartovice,Rozptýlená zeleň,0.8,0.9,0.08925177483875305,3,1.3137436920747123
+nausithous,CZ0813448,Jakartovice,Rozptýlená zeleň,0.9,1,0.1664805957966397,4,2.450515219174223
+nausithous,CZ0813448,Jakartovice,Souvislá zástavba,0.8,0.9,0.11018203814286827,1,1.6218272169000922
+nausithous,CZ0813449,Jilešovice - Děhylov,Degradovaný travní porost,0.7,0.8,4.1617874709518805,1,89.74321187369598
+nausithous,CZ0813449,Jilešovice - Děhylov,Degradovaný travní porost,0.8,0.9,0.08000082786144067,1,1.7251076118017756
+nausithous,CZ0813449,Jilešovice - Děhylov,Degradovaný travní porost,0.9,1,0.1708715288355248,1,3.6846090586075864
+nausithous,CZ0813449,Jilešovice - Děhylov,Dopravní síť,0.7,0.8,0.03102592832053197,3,0.6690313905459395
+nausithous,CZ0813449,Jilešovice - Děhylov,Dopravní síť,0.8,0.9,0.004414858788438142,1,0.09520034610336159
+nausithous,CZ0813449,Jilešovice - Děhylov,Dopravní síť,0.9,1,0.03168410579240881,2,0.6832240807593172
+nausithous,CZ0813449,Jilešovice - Děhylov,Rozptýlená zeleň,0.7,0.8,0.08762884480310604,1,1.8895952857519895
+nausithous,CZ0813449,Jilešovice - Děhylov,Rozptýlená zeleň,0.8,0.9,0.029964176016720013,1,0.6461361652074414
+nausithous,CZ0813449,Jilešovice - Děhylov,Rozptýlená zeleň,0.9,1,0.040062109578400854,1,0.8638841875266012
+nausithous,CZ0814092,Poodří,Aluviální a vlhké louky,0.7,0.8,0.0411061932459008,1,0.0016523756065299907
+nausithous,CZ0814092,Poodří,Aluviální a vlhké louky,0.8,0.9,21.697365525053595,13,0.872184814222334
+nausithous,CZ0814092,Poodří,Aluviální a vlhké louky,0.9,1,1119.3218961341233,381,44.994197977974075
+nausithous,CZ0814092,Poodří,Degradovaný travní porost,0.7,0.8,23.56129589988974,51,0.9471105818609288
+nausithous,CZ0814092,Poodří,Degradovaný travní porost,0.8,0.9,79.53631936179934,149,3.197179392419708
+nausithous,CZ0814092,Poodří,Degradovaný travní porost,0.9,1,661.9112576199385,681,26.607329198206493
+nausithous,CZ0814092,Poodří,Dopravní síť,0.7,0.8,1.6628211286183545,98,0.06684163270763668
+nausithous,CZ0814092,Poodří,Dopravní síť,0.8,0.9,5.108580748882146,250,0.2053533433014587
+nausithous,CZ0814092,Poodří,Dopravní síť,0.9,1,16.991706125324253,852,0.6830279940264692
+nausithous,CZ0814092,Poodří,Mezofilní louky,0.7,0.8,10.126973065906554,6,0.40708131648164547
+nausithous,CZ0814092,Poodří,Mezofilní louky,0.8,0.9,10.589035653406544,12,0.42565518304495836
+nausithous,CZ0814092,Poodří,Mezofilní louky,0.9,1,237.06206042043885,98,9.529356404500792
+nausithous,CZ0814092,Poodří,Orná půda,0.7,0.8,114.73447806597714,14,4.612065428926009
+nausithous,CZ0814092,Poodří,Orná půda,0.8,0.9,72.31926277792245,19,2.9070701094022624
+nausithous,CZ0814092,Poodří,Orná půda,0.9,1,13.899365621924803,20,0.5587229292316046
+nausithous,CZ0814092,Poodří,"Ovocný sad, zahrada",0.7,0.8,0.20953760189503665,4,0.008422935686380499
+nausithous,CZ0814092,Poodří,"Ovocný sad, zahrada",0.8,0.9,0.5477140814336177,7,0.022016862084502126
+nausithous,CZ0814092,Poodří,"Ovocný sad, zahrada",0.9,1,0.8746633521866941,25,0.03515948018911163
+nausithous,CZ0814092,Poodří,Rozptýlená zeleň,0.7,0.8,6.409250030742069,58,0.257637294302505
+nausithous,CZ0814092,Poodří,Rozptýlená zeleň,0.8,0.9,15.353082291698795,129,0.6171590376197269
+nausithous,CZ0814092,Poodří,Rozptýlená zeleň,0.9,1,72.38171489750714,685,2.909580542765929
+nausithous,CZ0814092,Poodří,Souvislá zástavba,0.7,0.8,0.31767628220112243,9,0.012769865025986525
+nausithous,CZ0814092,Poodří,Souvislá zástavba,0.8,0.9,1.0279140620995204,19,0.04131981065874495
+nausithous,CZ0814092,Poodří,Souvislá zástavba,0.9,1,2.0176634912575584,27,0.08110548975421349
+teleius,CZ0214005,Andělské schody,Degradovaný travní porost,0.7,0.8,0.067766797330603007,1,0.28993080309258135
+teleius,CZ0214005,Andělské schody,Degradovaný travní porost,0.8,0.9,0.02348429376584245,1,0.10047427973282702
+teleius,CZ0214005,Andělské schody,Dopravní síť,0.7,0.8,0.5412871629476388,10,2.315821730389533
+teleius,CZ0214005,Andělské schody,Dopravní síť,0.8,0.9,0.08795024687177484,6,0.3762828805871438
+teleius,CZ0214005,Andělské schody,Dopravní síť,0.9,1,0.014343747033714318,1,0.06136772373280781
+teleius,CZ0214005,Andělské schody,Hospodářské lesy smíšené,0.7,0.8,0.0020122285859161624,1,0.008609039720061547
+teleius,CZ0214005,Andělské schody,Hospodářské lesy smíšené,0.8,0.9,0.061654257722932385,1,0.2637791538012426
+teleius,CZ0214005,Andělské schody,Mezofilní louky,0.7,0.8,6.53433201746778,9,27.956229364884795
+teleius,CZ0214005,Andělské schody,Mezofilní louky,0.8,0.9,12.357443249806755,7,52.86959966705555
+teleius,CZ0214005,Andělské schody,Mezofilní louky,0.9,1,2.2949430517835463,3,9.81859418277193
+teleius,CZ0214005,Andělské schody,Orná půda,0.7,0.8,0.0971039876726427,1,0.4154458855724545
+teleius,CZ0214005,Andělské schody,Rašeliniště a prameniště,0.7,0.8,0.007983149674580636,1,0.03415479390397875
+teleius,CZ0214005,Andělské schody,Rašeliniště a prameniště,0.9,1,0.034986419749748164,1,0.14968452361548798
+teleius,CZ0214005,Andělské schody,Rozptýlená zeleň,0.7,0.8,0.22099976307740435,1,0.945516703109214
+teleius,CZ0214005,Andělské schody,Rozptýlená zeleň,0.8,0.9,1.7259152809856461e-7,1,7.384088125704463e-7
+teleius,CZ0214005,Andělské schody,Souvislá zástavba,0.7,0.8,1.0126295048305067,2,4.332394286518355
+teleius,CZ0214005,Andělské schody,Souvislá zástavba,0.8,0.9,0.014506226597708883,1,0.062062869915462116
+teleius,CZ0214005,Andělské schody,Souvislá zástavba,0.9,1,1.2007680333211674e-5,1,5.1373187747134114e-5
+teleius,CZ0214040,Louky u Drahlína,Degradovaný travní porost,0.9,1,0.12474767379395417,1,9.913105422299436
+teleius,CZ0214040,Louky u Drahlína,Mezofilní louky,0.9,1,1.0767562972484157,1,85.56471126169924
+teleius,CZ0214040,Louky u Drahlína,Rozptýlená zeleň,0.7,0.8,0.006512843364011496,1,0.5175447437441375
+teleius,CZ0214040,Louky u Drahlína,Souvislá zástavba,0.8,0.9,0.050394838447985243,1,4.004638572257193
+teleius,CZ0313004,Terčino údolí,Degradovaný travní porost,0.7,0.8,0.3795355866618404,2,8.387082528198803
+teleius,CZ0313004,Terčino údolí,Degradovaný travní porost,0.8,0.9,0.09823738364148886,1,2.170876916186511
+teleius,CZ0313004,Terčino údolí,Degradovaný travní porost,0.9,1,0.613979942575522,4,13.567898847988083
+teleius,CZ0313004,Terčino údolí,Dopravní síť,0.7,0.8,0.019281036137100454,2,0.4260776775462883
+teleius,CZ0313004,Terčino údolí,Dopravní síť,0.8,0.9,0.014437246734951623,1,0.3190382775723581
+teleius,CZ0313004,Terčino údolí,Dopravní síť,0.9,1,0.013448845782288117,2,0.29719631952607556
+teleius,CZ0313004,Terčino údolí,Hospodářské lesy smíšené,0.8,0.9,0.14524003028512342,2,3.2095544217959344
+teleius,CZ0313004,Terčino údolí,Hospodářské lesy smíšené,0.9,1,0.17515196873766836,3,3.870556723546948
+teleius,CZ0313004,Terčino údolí,Mezofilní louky,0.7,0.8,0.1398882270852104,1,3.0912887921954573
+teleius,CZ0313004,Terčino údolí,Mezofilní louky,0.8,0.9,1.043776489783195,3,23.06566200498397
+teleius,CZ0313004,Terčino údolí,Mezofilní louky,0.9,1,1.8100410482506735,3,39.998788478909745
+teleius,CZ0313004,Terčino údolí,Rozptýlená zeleň,0.7,0.8,0.07222187553442783,1,1.5959790115498287
+teleius,CZ0313123,Stropnice,Aluviální a vlhké louky,0.9,1,12.833792592332287,5,2.4044108002704343
+teleius,CZ0313123,Stropnice,Degradovaný travní porost,0.7,0.8,29.986848015273438,19,5.618035410442036
+teleius,CZ0313123,Stropnice,Degradovaný travní porost,0.8,0.9,66.04546988795835,43,12.373617538623785
+teleius,CZ0313123,Stropnice,Degradovaný travní porost,0.9,1,20.23548384811606,80,3.7911175175277014
+teleius,CZ0313123,Stropnice,Dopravní síť,0.7,0.8,1.5801440812154084,57,0.29603996383171094
+teleius,CZ0313123,Stropnice,Dopravní síť,0.8,0.9,2.6730982430861285,134,0.5008049054571941
+teleius,CZ0313123,Stropnice,Dopravní síť,0.9,1,2.0742988123714983,121,0.3886198433995256
+teleius,CZ0313123,Stropnice,Hospodářské lesy smíšené,0.7,0.8,16.471977598050643,47,3.086024692515941
+teleius,CZ0313123,Stropnice,Hospodářské lesy smíšené,0.8,0.9,25.570892987034014,51,4.790706319137326
+teleius,CZ0313123,Stropnice,Hospodářské lesy smíšené,0.9,1,6.0793143639431175,27,1.138959431496285
+teleius,CZ0313123,Stropnice,Mezofilní louky,0.8,0.9,1.1301374503222186,4,0.21173123001600697
+teleius,CZ0313123,Stropnice,Mezofilní louky,0.9,1,105.38197287305903,56,19.743310631432134
+teleius,CZ0313123,Stropnice,Mokřady a pobřežní vegetace,0.7,0.8,4.046768336993323,18,0.7581619716585211
+teleius,CZ0313123,Stropnice,Mokřady a pobřežní vegetace,0.8,0.9,1.9791653620265628,23,0.37079659327056397
+teleius,CZ0313123,Stropnice,Mokřady a pobřežní vegetace,0.9,1,174.2894672292678,29,32.6531284002366
+teleius,CZ0313123,Stropnice,Nepůvodní křoviny,0.7,0.8,0.9908512952547288,2,0.18563597148950514
+teleius,CZ0313123,Stropnice,Nepůvodní křoviny,0.8,0.9,6.844824717190489,13,1.2823777817481434
+teleius,CZ0313123,Stropnice,Nepůvodní křoviny,0.9,1,3.5731927067591176,21,0.6694375862605279
+teleius,CZ0313123,Stropnice,Orná půda,0.7,0.8,22.02987558596602,4,4.12729677579156
+teleius,CZ0313123,Stropnice,Orná půda,0.8,0.9,5.828197969812743,3,1.09191277978923
+teleius,CZ0313123,Stropnice,Rašeliniště a prameniště,0.7,0.8,0.12022306173397229,1,0.022523788349785866
+teleius,CZ0313123,Stropnice,Rašeliniště a prameniště,0.9,1,4.922641732682335,4,0.9222568358315975
+teleius,CZ0313123,Stropnice,Rozptýlená zeleň,0.7,0.8,2.8064077922557376,21,0.5257804469813805
+teleius,CZ0313123,Stropnice,Rozptýlená zeleň,0.8,0.9,4.152544218037,56,0.7779790809782937
+teleius,CZ0313123,Stropnice,Rozptýlená zeleň,0.9,1,5.42117134747386,49,1.0156563497660491
+teleius,CZ0313123,Stropnice,Souvislá zástavba,0.7,0.8,0.25455180656299925,2,0.04769027616155345
+teleius,CZ0313123,Stropnice,Souvislá zástavba,0.8,0.9,6.398108831245164,10,1.1986855689363949
+teleius,CZ0313123,Stropnice,Souvislá zástavba,0.9,1,0.038972561167923414,3,0.007301508600220098
+teleius,CZ0314123,Boletice,Degradovaný travní porost,0.7,0.8,252.00629208838052,162,12.486496983799755
+teleius,CZ0314123,Boletice,Degradovaný travní porost,0.8,0.9,131.41952682976952,135,6.511621244745777
+teleius,CZ0314123,Boletice,Degradovaný travní porost,0.9,1,130.62336551173615,184,6.472172761877123
+teleius,CZ0314123,Boletice,Dopravní síť,0.7,0.8,10.883360942813251,465,0.53925262127337
+teleius,CZ0314123,Boletice,Dopravní síť,0.8,0.9,10.225227780474349,446,0.5066432063322491
+teleius,CZ0314123,Boletice,Dopravní síť,0.9,1,9.479739972286996,451,0.469705512470517
+teleius,CZ0314123,Boletice,Hospodářské lesy smíšené,0.7,0.8,41.550883014848154,42,2.058777862804958
+teleius,CZ0314123,Boletice,Hospodářské lesy smíšené,0.8,0.9,9.646064983158178,17,0.4779466429969132
+teleius,CZ0314123,Boletice,Hospodářské lesy smíšené,0.9,1,5.537676358219555,17,0.2743827488240555
+teleius,CZ0314123,Boletice,Mezofilní louky,0.7,0.8,166.6706145919661,136,8.258254621915423
+teleius,CZ0314123,Boletice,Mezofilní louky,0.8,0.9,171.409182900323,133,8.493042882158848
+teleius,CZ0314123,Boletice,Mezofilní louky,0.9,1,546.704792485346,232,27.088322620147377
+teleius,CZ0314123,Boletice,Mokřady a pobřežní vegetace,0.7,0.8,0.4892101918661458,7,0.024239559792572262
+teleius,CZ0314123,Boletice,Mokřady a pobřežní vegetace,0.8,0.9,6.701433512027105,16,0.33204500031179673
+teleius,CZ0314123,Boletice,Mokřady a pobřežní vegetace,0.9,1,4.261967297240213,11,0.21117346460293737
+teleius,CZ0314123,Boletice,Nepůvodní křoviny,0.7,0.8,34.095583475838275,45,1.6893800416802258
+teleius,CZ0314123,Boletice,Nepůvodní křoviny,0.8,0.9,82.74834690388039,67,4.100044389635138
+teleius,CZ0314123,Boletice,Nepůvodní křoviny,0.9,1,28.3477131959097,63,1.4045825300036925
+teleius,CZ0314123,Boletice,Rašeliniště a prameniště,0.7,0.8,7.870262172212528,13,0.3899585365931273
+teleius,CZ0314123,Boletice,Rašeliniště a prameniště,0.8,0.9,0.09011625807024538,2,0.004465112260732007
+teleius,CZ0314123,Boletice,Rašeliniště a prameniště,0.9,1,47.44708837323329,41,2.350925133467231
+teleius,CZ0314123,Boletice,Rozptýlená zeleň,0.7,0.8,145.5239978678832,164,7.210474569462496
+teleius,CZ0314123,Boletice,Rozptýlená zeleň,0.8,0.9,116.8578468298693,168,5.790113968514579
+teleius,CZ0314123,Boletice,Rozptýlená zeleň,0.9,1,49.368020346707915,138,2.446104150999315
+teleius,CZ0314123,Boletice,Souvislá zástavba,0.8,0.9,0.03640070699791395,5,0.001803595118086292
+teleius,CZ0314123,Boletice,Suché trávníky,0.7,0.8,1.6181940653910005,6,0.08017885247730697
+teleius,CZ0314123,Boletice,Suché trávníky,0.8,0.9,6.368197595734943,9,0.3155337091484136
+teleius,CZ0314123,Boletice,Suché trávníky,0.9,1,0.24940639951307678,3,0.012357676585980687
+teleius,CZ0314124,Blanský les,Aluviální a vlhké louky,0.7,0.8,0.8794261703348224,2,0.11541736149389246
+teleius,CZ0314124,Blanský les,Aluviální a vlhké louky,0.8,0.9,5.57088632311101,3,0.7311324387254535
+teleius,CZ0314124,Blanský les,Degradovaný travní porost,0.7,0.8,149.77098675264114,189,19.65619480341963
+teleius,CZ0314124,Blanský les,Degradovaný travní porost,0.8,0.9,35.55211454138851,130,4.665918975703731
+teleius,CZ0314124,Blanský les,Degradovaný travní porost,0.9,1,11.589525394683593,36,1.5210286970554543
+teleius,CZ0314124,Blanský les,Dopravní síť,0.7,0.8,9.204369453648614,354,1.2079968420210183
+teleius,CZ0314124,Blanský les,Dopravní síť,0.8,0.9,6.266821590432076,272,0.8224681472070001
+teleius,CZ0314124,Blanský les,Dopravní síť,0.9,1,3.431505774748587,130,0.45035655730116353
+teleius,CZ0314124,Blanský les,Hospodářské lesy smíšené,0.7,0.8,35.57283768836433,105,4.668638716173688
+teleius,CZ0314124,Blanský les,Hospodářské lesy smíšené,0.8,0.9,18.889749672984404,58,2.4791223414535324
+teleius,CZ0314124,Blanský les,Hospodářské lesy smíšené,0.9,1,2.5885781499242064,7,0.3397293259663225
+teleius,CZ0314124,Blanský les,Mezofilní louky,0.7,0.8,119.70567348841604,103,15.710372804373321
+teleius,CZ0314124,Blanský les,Mezofilní louky,0.8,0.9,194.57072787157128,120,25.535787758434537
+teleius,CZ0314124,Blanský les,Mezofilní louky,0.9,1,78.88969059599586,77,10.353614942107946
+teleius,CZ0314124,Blanský les,Mokřady a pobřežní vegetace,0.7,0.8,2.300566935496111,7,0.3019302524667398
+teleius,CZ0314124,Blanský les,Mokřady a pobřežní vegetace,0.8,0.9,1.0378701710847207,3,0.13621181716050873
+teleius,CZ0314124,Blanský les,Mokřady a pobřežní vegetace,0.9,1,0.21307676630868522,2,0.027964551195509696
+teleius,CZ0314124,Blanský les,Nepůvodní křoviny,0.7,0.8,8.7487806333407,19,1.1482046032410027
+teleius,CZ0314124,Blanský les,Nepůvodní křoviny,0.8,0.9,1.0239543520856504,4,0.13438548179993176
+teleius,CZ0314124,Blanský les,Orná půda,0.7,0.8,0.3253091659466503,1,0.04269411904019896
+teleius,CZ0314124,Blanský les,Orná půda,0.8,0.9,0.3391777724486776,1,0.044514258153697944
+teleius,CZ0314124,Blanský les,Rašeliniště a prameniště,0.8,0.9,0.9045228395664338,2,0.11871109033970874
+teleius,CZ0314124,Blanský les,Rozptýlená zeleň,0.7,0.8,17.4694055958966,160,2.2927140091559632
+teleius,CZ0314124,Blanský les,Rozptýlená zeleň,0.8,0.9,15.136661509662716,128,1.9865607736079594
+teleius,CZ0314124,Blanský les,Rozptýlená zeleň,0.9,1,3.1716925822190354,47,0.4162582393586253
+teleius,CZ0314124,Blanský les,Souvislá zástavba,0.7,0.8,10.100291176275574,55,1.3255791073876466
+teleius,CZ0314124,Blanský les,Souvislá zástavba,0.8,0.9,4.569067145986205,24,0.5996520143099454
+teleius,CZ0314124,Blanský les,Souvislá zástavba,0.9,1,1.551261409848512,12,0.20359014201708878
+teleius,CZ0314124,Blanský les,Suché trávníky,0.7,0.8,9.880794241387687,25,1.2967719625296408
+teleius,CZ0314124,Blanský les,Suché trávníky,0.8,0.9,8.95730977028651,13,1.175572315952714
+teleius,CZ0314124,Blanský les,Suché trávníky,0.9,1,3.7404700903670047,1,0.4909055508464288
+teleius,CZ0424030,Bezručovo údolí,Dopravní síť,0.7,0.8,0.09079947327292175,4,9.57316610994979
+teleius,CZ0424030,Bezručovo údolí,Mezofilní louky,0.7,0.8,0.8576795589518516,1,90.42683389005022
+teleius,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.7,0.8,1.5912858259845117,14,3.285839807247705
+teleius,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.8,0.9,1.2852243459581252,8,2.653854667862923
+teleius,CZ0424127,Východní Krušnohoří,Degradovaný travní porost,0.9,1,0.011401947950851173,1,0.023543837219749002
+teleius,CZ0424127,Východní Krušnohoří,Dopravní síť,0.7,0.8,1.278743330783636,68,2.6404720452667987
+teleius,CZ0424127,Východní Krušnohoří,Dopravní síť,0.8,0.9,0.23182922358233,26,0.47870324670230713
+teleius,CZ0424127,Východní Krušnohoří,Dopravní síť,0.9,1,0.014384467908046646,4,0.029702430881073418
+teleius,CZ0424127,Východní Krušnohoří,Hospodářské lesy smíšené,0.7,0.8,2.0046354353870064,7,4.139363780569533
+teleius,CZ0424127,Východní Krušnohoří,Hospodářské lesy smíšené,0.8,0.9,0.2753364313431084,1,0.5685411079011999
+teleius,CZ0424127,Východní Krušnohoří,Hospodářské lesy smíšené,0.9,1,0.025915586518181957,1,0.053512992084203376
+teleius,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.7,0.8,20.699122653707377,26,42.74153648580066
+teleius,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.8,0.9,20.048147079417365,17,41.39733959758626
+teleius,CZ0424127,Východní Krušnohoří,Mezofilní louky,0.9,1,0.026660055168246724,2,0.05505024245474403
+teleius,CZ0424127,Východní Krušnohoří,Mokřady a pobřežní vegetace,0.7,0.8,0.03403473964784644,1,0.07027819926380344
+teleius,CZ0424127,Východní Krušnohoří,Rozptýlená zeleň,0.7,0.8,0.531152498495797,8,1.0967746930044946
+teleius,CZ0424127,Východní Krušnohoří,Rozptýlená zeleň,0.8,0.9,0.3399681152595731,4,0.701998816349511
+teleius,CZ0424127,Východní Krušnohoří,Souvislá zástavba,0.7,0.8,0.030746366134863184,1,0.06348804980503203
+teleius,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.7,0.8,6.7395732366298216,4,1.9059362759751652
+teleius,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.8,0.9,2.1750292043189594,16,0.6150934066991278
+teleius,CZ0513506,Horní Ploučnice,Aluviální a vlhké louky,0.9,1,36.81206457103496,49,10.410369736490983
+teleius,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.7,0.8,12.49468552953893,70,3.5334691933043874
+teleius,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.8,0.9,19.634767591453034,89,5.552668471573037
+teleius,CZ0513506,Horní Ploučnice,Degradovaný travní porost,0.9,1,27.4566015061126,118,7.76466565287488
+teleius,CZ0513506,Horní Ploučnice,Dopravní síť,0.7,0.8,1.0660749119816766,104,0.3014836067971809
+teleius,CZ0513506,Horní Ploučnice,Dopravní síť,0.8,0.9,1.5084398182755843,130,0.42658341542327155
+teleius,CZ0513506,Horní Ploučnice,Dopravní síť,0.9,1,1.7572847382868544,167,0.49695620365322585
+teleius,CZ0513506,Horní Ploučnice,Hospodářské lesy smíšené,0.7,0.8,0.5388054975417407,9,0.15237299268123622
+teleius,CZ0513506,Horní Ploučnice,Hospodářské lesy smíšené,0.8,0.9,3.3465356288039567,26,0.9463928100246201
+teleius,CZ0513506,Horní Ploučnice,Hospodářské lesy smíšené,0.9,1,4.670948647037976,25,1.3209338569423394
+teleius,CZ0513506,Horní Ploučnice,Mezofilní louky,0.7,0.8,6.8838598732551555,11,1.9467402149231137
+teleius,CZ0513506,Horní Ploučnice,Mezofilní louky,0.8,0.9,31.679991736443707,22,8.959030988032568
+teleius,CZ0513506,Horní Ploučnice,Mezofilní louky,0.9,1,65.74710921243087,73,18.593135809758653
+teleius,CZ0513506,Horní Ploučnice,Mokřady a pobřežní vegetace,0.7,0.8,29.958094708649835,15,8.472082349960157
+teleius,CZ0513506,Horní Ploučnice,Mokřady a pobřežní vegetace,0.8,0.9,31.828017318094368,25,9.00089229229245
+teleius,CZ0513506,Horní Ploučnice,Mokřady a pobřežní vegetace,0.9,1,41.43213506802031,32,11.71691536610273
+teleius,CZ0513506,Horní Ploučnice,Nepůvodní křoviny,0.7,0.8,2.6003674702841053,21,0.7353781194250519
+teleius,CZ0513506,Horní Ploučnice,Nepůvodní křoviny,0.8,0.9,3.4013700637292956,17,0.9618998658911225
+teleius,CZ0513506,Horní Ploučnice,Nepůvodní křoviny,0.9,1,2.5671525042317684,18,0.7259850011248657
+teleius,CZ0513506,Horní Ploučnice,Rašeliniště a prameniště,0.7,0.8,0.6392129113297911,2,0.18076798530115326
+teleius,CZ0513506,Horní Ploučnice,Rašeliniště a prameniště,0.8,0.9,0.005004025791073218,1,0.0014151273302122317
+teleius,CZ0513506,Horní Ploučnice,Rašeliniště a prameniště,0.9,1,0.6142996958270902,2,0.17372258353599213
+teleius,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.7,0.8,3.3438880585596658,70,0.9456440830660108
+teleius,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.8,0.9,4.062345138041986,75,1.1488221423345342
+teleius,CZ0513506,Horní Ploučnice,Rozptýlená zeleň,0.9,1,9.090848463922336,112,2.570871664783182
+teleius,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.7,0.8,0.3121679906499904,34,0.08828041133886597
+teleius,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.8,0.9,0.4417712541756098,23,0.12493192513141718
+teleius,CZ0513506,Horní Ploučnice,Souvislá zástavba,0.9,1,0.4050913213539938,12,0.11455892195888857
+teleius,CZ0513506,Horní Ploučnice,Suché trávníky,0.7,0.8,0.3960410495024873,1,0.11199952526957406
+teleius,CZ0514670,Ronov - Vlhošť,Aluviální a vlhké louky,0.9,1,0.08499968602708541,1,0.02545584115009228
+teleius,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.7,0.8,5.179629719634902,13,1.5512037458268735
+teleius,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.8,0.9,5.088753808693231,23,1.523988083494145
+teleius,CZ0514670,Ronov - Vlhošť,Degradovaný travní porost,0.9,1,6.7105182383820825,28,2.0096766740599303
+teleius,CZ0514670,Ronov - Vlhošť,Dopravní síť,0.7,0.8,0.219367725116403,20,0.06569659518790273
+teleius,CZ0514670,Ronov - Vlhošť,Dopravní síť,0.8,0.9,0.4758116281693443,39,0.14249682310809966
+teleius,CZ0514670,Ronov - Vlhošť,Dopravní síť,0.9,1,1.440535455379287,75,0.4314138491232303
+teleius,CZ0514670,Ronov - Vlhošť,Hospodářské lesy smíšené,0.7,0.8,2.8777171971600213,6,0.8618233227644092
+teleius,CZ0514670,Ronov - Vlhošť,Hospodářské lesy smíšené,0.8,0.9,0.20357306274942238,3,0.06096638458330027
+teleius,CZ0514670,Ronov - Vlhošť,Hospodářské lesy smíšené,0.9,1,0.27814173186701957,1,0.08329832820043875
+teleius,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.7,0.8,20.838183002350956,5,6.240652185413582
+teleius,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.8,0.9,125.9065849172005,9,37.706704285725934
+teleius,CZ0514670,Ronov - Vlhošť,Mezofilní louky,0.9,1,116.70375999479266,23,34.95062764231015
+teleius,CZ0514670,Ronov - Vlhošť,Mokřady a pobřežní vegetace,0.7,0.8,1.3330446231928597,3,0.39922232375268946
+teleius,CZ0514670,Ronov - Vlhošť,Mokřady a pobřežní vegetace,0.8,0.9,14.651554617318357,6,4.387870877799593
+teleius,CZ0514670,Ronov - Vlhošť,Mokřady a pobřežní vegetace,0.9,1,2.241623824388422,11,0.6713250678797907
+teleius,CZ0514670,Ronov - Vlhošť,Nepůvodní křoviny,0.7,0.8,10.25236335946248,5,3.070394083671561
+teleius,CZ0514670,Ronov - Vlhošť,Nepůvodní křoviny,0.8,0.9,1.9722230068196962,11,0.5906444825944615
+teleius,CZ0514670,Ronov - Vlhošť,Nepůvodní křoviny,0.9,1,0.6982662482425688,5,0.20911788650689472
+teleius,CZ0514670,Ronov - Vlhošť,Orná půda,0.8,0.9,6.623814629719706,3,1.9837105394491985
+teleius,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.7,0.8,2.390269162667246,7,0.715841610184685
+teleius,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.8,0.9,3.276223720130949,26,0.9811686900260131
+teleius,CZ0514670,Ronov - Vlhošť,Rozptýlená zeleň,0.9,1,4.17163848834784,27,1.249328928828691
+teleius,CZ0514670,Ronov - Vlhošť,Souvislá zástavba,0.8,0.9,0.2917433030127635,3,0.08737174835833683
+teleius,CZ0523010,Na Plachtě,Degradovaný travní porost,0.7,0.8,5.837687524909106,6,17.515278608307458
+teleius,CZ0523010,Na Plachtě,Degradovaný travní porost,0.8,0.9,10.371814435058742,8,31.119380530143644
+teleius,CZ0523010,Na Plachtě,Degradovaný travní porost,0.9,1,0.5707802629543702,2,1.712557461685044
+teleius,CZ0523010,Na Plachtě,Dopravní síť,0.7,0.8,0.12721685541640845,10,0.38169885880040416
+teleius,CZ0523010,Na Plachtě,Dopravní síť,0.8,0.9,0.24918501532453957,9,0.7476496386285476
+teleius,CZ0523010,Na Plachtě,Dopravní síť,0.9,1,0.07366286846240401,5,0.22101656841014286
+teleius,CZ0523010,Na Plachtě,Hospodářské lesy smíšené,0.7,0.8,2.9574595918002364,7,8.873501451073118
+teleius,CZ0523010,Na Plachtě,Hospodářské lesy smíšené,0.8,0.9,1.0807812918538875,4,3.2427541489148206
+teleius,CZ0523010,Na Plachtě,Mezofilní louky,0.7,0.8,2.3738049863406867,2,7.1223160746675935
+teleius,CZ0523010,Na Plachtě,Mezofilní louky,0.8,0.9,1.6306362695879304,4,4.892527811530723
+teleius,CZ0523010,Na Plachtě,Mezofilní louky,0.9,1,3.3989933659551084,3,10.198270383343177
+teleius,CZ0523010,Na Plachtě,Mokřady a pobřežní vegetace,0.7,0.8,0.2127868746139109,3,0.6384413994669346
+teleius,CZ0523010,Na Plachtě,Mokřady a pobřežní vegetace,0.8,0.9,0.050716082770563664,1,0.15216750054847022
+teleius,CZ0523010,Na Plachtě,Nepůvodní křoviny,0.7,0.8,0.6818803289511736,1,2.0458998341625185
+teleius,CZ0523010,Na Plachtě,Rozptýlená zeleň,0.7,0.8,1.9462168657966337,4,5.839389397113325
+teleius,CZ0523010,Na Plachtě,Rozptýlená zeleň,0.8,0.9,1.7068774365074932,5,5.121280254055369
+teleius,CZ0523010,Na Plachtě,Souvislá zástavba,0.7,0.8,0.016714673388761002,2,0.05015036519200638
+teleius,CZ0523010,Na Plachtě,Souvislá zástavba,0.8,0.9,0.04190126929822436,2,0.12571971395669151
+teleius,CZ0523014,Vladivostok,Degradovaný travní porost,0.7,0.8,0.20361062184990442,3,1.0135738193275616
+teleius,CZ0523014,Vladivostok,Degradovaný travní porost,0.8,0.9,0.06805175340236165,1,0.33876167648471556
+teleius,CZ0523014,Vladivostok,Degradovaný travní porost,0.9,1,0.9071596165419266,8,4.515841211643342
+teleius,CZ0523014,Vladivostok,Dopravní síť,0.7,0.8,0.03098376629878476,4,0.15423721051135622
+teleius,CZ0523014,Vladivostok,Dopravní síť,0.8,0.9,0.026904496070460304,5,0.1339306004345992
+teleius,CZ0523014,Vladivostok,Dopravní síť,0.9,1,0.2850136364811624,14,1.4187980836363456
+teleius,CZ0523014,Vladivostok,Hospodářské lesy smíšené,0.7,0.8,9.391378667962272e-4,2,0.004675028963987409
+teleius,CZ0523014,Vladivostok,Hospodářské lesy smíšené,0.8,0.9,0.055983492883910004,2,0.2786858671031001
+teleius,CZ0523014,Vladivostok,Mezofilní louky,0.7,0.8,0.13709270319642966,1,0.6824475733057649
+teleius,CZ0523014,Vladivostok,Mezofilní louky,0.8,0.9,0.9183962930602051,4,4.5717773952849585
+teleius,CZ0523014,Vladivostok,Mezofilní louky,0.9,1,16.182098728267064,7,80.55449889464117
+teleius,CZ0523014,Vladivostok,Rozptýlená zeleň,0.8,0.9,0.8180110857067615,3,4.072059762202808
+teleius,CZ0523014,Vladivostok,Rozptýlená zeleň,0.9,1,0.45414073037674774,6,2.2607128764603037
+teleius,CZ0523275,Kačerov,Degradovaný travní porost,0.8,0.9,0.057086387926561295,2,3.2193661738070167
+teleius,CZ0523275,Kačerov,Degradovaný travní porost,0.9,1,0.011290086048236118,1,0.6367003140892421
+teleius,CZ0523275,Kačerov,Dopravní síť,0.9,1,7.987786169978791e-5,1,0.004504683083525101
+teleius,CZ0523275,Kačerov,Mezofilní louky,0.7,0.8,1.2538586185686291,1,70.71090272078794
+teleius,CZ0523275,Kačerov,Mezofilní louky,0.9,1,0.21429107068129816,1,12.08486732752748
+teleius,CZ0523275,Kačerov,Rozptýlená zeleň,0.7,0.8,0.23661219022320584,1,13.3436587807048
+teleius,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.7,0.8,0.0043971097599714995,1,0.02709448367371154
+teleius,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.8,0.9,0.19409316618265876,3,1.1959797251795494
+teleius,CZ0534055,Ratajské rybníky,Degradovaný travní porost,0.9,1,0.8349537002514,6,5.144888491460633
+teleius,CZ0534055,Ratajské rybníky,Dopravní síť,0.7,0.8,0.017715262528508902,1,0.10915940641820807
+teleius,CZ0534055,Ratajské rybníky,Dopravní síť,0.8,0.9,0.008899607808032306,3,0.05483835783501796
+teleius,CZ0534055,Ratajské rybníky,Dopravní síť,0.9,1,0.09141810692267609,10,0.5633078409928337
+teleius,CZ0534055,Ratajské rybníky,Hospodářské lesy smíšené,0.9,1,0.4675155716064997,2,2.8807770816665554
+teleius,CZ0534055,Ratajské rybníky,Mezofilní louky,0.7,0.8,0.07647820265643532,1,0.4712498723895898
+teleius,CZ0534055,Ratajské rybníky,Mezofilní louky,0.8,0.9,3.2314272249644973,4,19.911682211488632
+teleius,CZ0534055,Ratajské rybníky,Mezofilní louky,0.9,1,10.100515445746552,8,62.238212321228254
+teleius,CZ0534055,Ratajské rybníky,Mokřady a pobřežní vegetace,0.8,0.9,0.05415038491322194,1,0.3336684322308109
+teleius,CZ0534055,Ratajské rybníky,Mokřady a pobřežní vegetace,0.9,1,0.01619963461677253,1,0.09982028186785141
+teleius,CZ0534055,Ratajské rybníky,Rašeliniště a prameniště,0.9,1,0.5178409913747571,1,3.1908765194146294
+teleius,CZ0534055,Ratajské rybníky,Rozptýlená zeleň,0.8,0.9,0.05596098647596082,2,0.34482515042961764
+teleius,CZ0534055,Ratajské rybníky,Rozptýlená zeleň,0.9,1,0.5572353184784162,10,3.4336198237241082
+teleius,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.7,0.8,2.637961668735024,5,2.959733523873408
+teleius,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.8,0.9,10.388918047820965,7,11.6561318488202
+teleius,CZ0537011,Louky u Přelouče,Aluviální a vlhké louky,0.9,1,5.473688619021448,6,6.1413552353589695
+teleius,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.7,0.8,2.507680311685564,16,2.8135607782398777
+teleius,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.8,0.9,14.605985274603537,29,16.387586210521146
+teleius,CZ0537011,Louky u Přelouče,Degradovaný travní porost,0.9,1,0.19869031519088315,6,0.2229260545023108
+teleius,CZ0537011,Louky u Přelouče,Dopravní síť,0.7,0.8,0.11773319214790436,16,0.13209398749143983
+teleius,CZ0537011,Louky u Přelouče,Dopravní síť,0.8,0.9,0.3248961433160633,37,0.3645261485588033
+teleius,CZ0537011,Louky u Přelouče,Dopravní síť,0.9,1,0.15175245627855258,17,0.170262834938441
+teleius,CZ0537011,Louky u Přelouče,Hospodářské lesy smíšené,0.7,0.8,1.5092368059902015,6,1.693329673093714
+teleius,CZ0537011,Louky u Přelouče,Hospodářské lesy smíšené,0.8,0.9,6.208180771031534,6,6.965438872013409
+teleius,CZ0537011,Louky u Přelouče,Hospodářské lesy smíšené,0.9,1,3.4044440778965104,5,3.819709507884713
+teleius,CZ0537011,Louky u Přelouče,Mezofilní louky,0.7,0.8,4.325773794943677,5,4.8534206805693865
+teleius,CZ0537011,Louky u Přelouče,Mezofilní louky,0.8,0.9,14.84513719122383,13,16.655909269687918
+teleius,CZ0537011,Louky u Přelouče,Mezofilní louky,0.9,1,13.338425258254622,11,14.965412447204706
+teleius,CZ0537011,Louky u Přelouče,Mokřady a pobřežní vegetace,0.7,0.8,0.7879087117425764,4,0.8840158124870221
+teleius,CZ0537011,Louky u Přelouče,Mokřady a pobřežní vegetace,0.8,0.9,1.4112895356745794,5,1.583435043857478
+teleius,CZ0537011,Louky u Přelouče,Mokřady a pobřežní vegetace,0.9,1,0.8621551718475036,3,0.9673186669621058
+teleius,CZ0537011,Louky u Přelouče,Nepůvodní křoviny,0.7,0.8,0.8205756958989223,7,0.9206674322877534
+teleius,CZ0537011,Louky u Přelouče,Nepůvodní křoviny,0.8,0.9,0.1582112874133396,2,0.17750949786809353
+teleius,CZ0537011,Louky u Přelouče,Nepůvodní křoviny,0.9,1,0.29310224687232406,4,0.32885411348931004
+teleius,CZ0537011,Louky u Přelouče,Orná půda,0.7,0.8,0.14054460054386728,4,0.15768787346654364
+teleius,CZ0537011,Louky u Přelouče,Orná půda,0.8,0.9,0.721127799827142,7,0.8090891347822136
+teleius,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.7,0.8,0.9898614153446412,15,1.1106021932415717
+teleius,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.8,0.9,2.6096811364004586,32,2.9280034041314726
+teleius,CZ0537011,Louky u Přelouče,Rozptýlená zeleň,0.9,1,0.295388960534386,8,0.33141975466799695
+teleius,CZ0723403,Uhliska,Degradovaný travní porost,0.7,0.8,0.027906613840640058,2,0.0717826599253675
+teleius,CZ0723403,Uhliska,Degradovaný travní porost,0.8,0.9,0.18435593487481822,4,0.474208711021414
+teleius,CZ0723403,Uhliska,Degradovaný travní porost,0.9,1,0.11234626433969826,4,0.288982165053567
+teleius,CZ0723403,Uhliska,Dopravní síť,0.7,0.8,0.026732460959388846,5,0.06876245054215295
+teleius,CZ0723403,Uhliska,Dopravní síť,0.8,0.9,0.06334660841654786,9,0.16294302402136887
+teleius,CZ0723403,Uhliska,Dopravní síť,0.9,1,0.13725372252690213,16,0.35305026055477157
+teleius,CZ0723403,Uhliska,Hospodářské lesy smíšené,0.7,0.8,0.007519343889120501,1,0.019341597957276475
+teleius,CZ0723403,Uhliska,Mezofilní louky,0.7,0.8,0.5122260224664001,1,1.3175710455448768
+teleius,CZ0723403,Uhliska,Mezofilní louky,0.8,0.9,23.374397999387067,5,60.124688438793
+teleius,CZ0723403,Uhliska,Mezofilní louky,0.9,1,13.86515736387554,6,35.664587668940754
+teleius,CZ0723403,Uhliska,Rozptýlená zeleň,0.7,0.8,0.013658936806640123,2,0.035134137782968124
+teleius,CZ0723403,Uhliska,Rozptýlená zeleň,0.8,0.9,0.19699050304788399,2,0.506707921267778
+teleius,CZ0723403,Uhliska,Rozptýlená zeleň,0.9,1,0.35464730848240433,5,0.9122399185947042
+teleius,CZ0724090,Bílé Karpaty,Aluviální a vlhké louky,0.8,0.9,0.032608788892359006,2,4.4947546218213156e-4
+teleius,CZ0724090,Bílé Karpaty,Aluviální a vlhké louky,0.9,1,1.232092348843223,24,0.016983006629759954
+teleius,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.7,0.8,464.39772269952283,118,6.401200048727015
+teleius,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.8,0.9,455.65849446755453,310,6.280739621274601
+teleius,CZ0724090,Bílé Karpaty,Degradovaný travní porost,0.9,1,492.8679876069085,1088,6.793630614607167
+teleius,CZ0724090,Bílé Karpaty,Dopravní síť,0.7,0.8,41.23608270863942,2170,0.5683929996673196
+teleius,CZ0724090,Bílé Karpaty,Dopravní síť,0.8,0.9,67.24587326015457,3409,0.9269086951748619
+teleius,CZ0724090,Bílé Karpaty,Dopravní síť,0.9,1,89.55739686833927,4137,1.2344479423048362
+teleius,CZ0724090,Bílé Karpaty,Hospodářské lesy smíšené,0.7,0.8,119.52114215095493,206,1.6474644546343449
+teleius,CZ0724090,Bílé Karpaty,Hospodářské lesy smíšené,0.8,0.9,307.0981088380193,500,4.233001871393378
+teleius,CZ0724090,Bílé Karpaty,Hospodářské lesy smíšené,0.9,1,244.23101516692768,531,3.3664497256777612
+teleius,CZ0724090,Bílé Karpaty,Mezofilní louky,0.7,0.8,70.01100826989659,14,0.9650229698448733
+teleius,CZ0724090,Bílé Karpaty,Mezofilní louky,0.8,0.9,503.5678074669477,83,6.941115591517291
+teleius,CZ0724090,Bílé Karpaty,Mezofilní louky,0.9,1,2051.9043517275636,752,28.283192604628912
+teleius,CZ0724090,Bílé Karpaty,Mokřady a pobřežní vegetace,0.7,0.8,0.02860440623126342,2,3.942795530886846e-4
+teleius,CZ0724090,Bílé Karpaty,Mokřady a pobřežní vegetace,0.8,0.9,0.3146299410028092,3,0.004336819702669549
+teleius,CZ0724090,Bílé Karpaty,Mokřady a pobřežní vegetace,0.9,1,0.22428050389636192,12,0.0030914543769173966
+teleius,CZ0724090,Bílé Karpaty,Nepůvodní křoviny,0.7,0.8,12.344621182764367,28,0.1701567123483851
+teleius,CZ0724090,Bílé Karpaty,Nepůvodní křoviny,0.8,0.9,19.345699843775773,51,0.2666587037998042
+teleius,CZ0724090,Bílé Karpaty,Nepůvodní křoviny,0.9,1,30.185812274254364,94,0.41607745593068574
+teleius,CZ0724090,Bílé Karpaty,Orná půda,0.7,0.8,62.59942531187448,29,0.8628626385748333
+teleius,CZ0724090,Bílé Karpaty,Orná půda,0.8,0.9,129.27586169989291,45,1.78192228722019
+teleius,CZ0724090,Bílé Karpaty,Orná půda,0.9,1,85.34195740368729,64,1.1763428526638275
+teleius,CZ0724090,Bílé Karpaty,Rašeliniště a prameniště,0.7,0.8,0.7154321860816344,40,0.009861427652542058
+teleius,CZ0724090,Bílé Karpaty,Rašeliniště a prameniště,0.8,0.9,0.5260059675065241,58,0.007250400379357679
+teleius,CZ0724090,Bílé Karpaty,Rašeliniště a prameniště,0.9,1,1.1855536829657463,44,0.016341523487786527
+teleius,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.7,0.8,24.12103274126245,140,0.33248129439820306
+teleius,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.8,0.9,67.36996413492119,263,0.9286191482515593
+teleius,CZ0724090,Bílé Karpaty,Rozptýlená zeleň,0.9,1,354.73905167254213,1074,4.889678660894055
+teleius,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.7,0.8,9.186842998154006,37,0.1266302933304442
+teleius,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.8,0.9,6.919938703824359,33,0.09538356844348488
+teleius,CZ0724090,Bílé Karpaty,Souvislá zástavba,0.9,1,31.93250019256348,107,0.4401535834422445
+teleius,CZ0724090,Bílé Karpaty,Suché trávníky,0.7,0.8,4.180584745044564,11,0.0576246565511295
+teleius,CZ0724090,Bílé Karpaty,Suché trávníky,0.8,0.9,143.6535996011939,56,1.9801032257902547
+teleius,CZ0724090,Bílé Karpaty,Suché trávníky,0.9,1,1362.1009852425107,353,18.775029391664226

@@ -1,0 +1,31 @@
+# Credentials – never commit
+.Renviron
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# renv: library and caches are restored from renv.lock
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
+renv/staging/
+
+# Quarto
+/.quarto/
+*_files/
+*_cache/
+
+**/*.quarto_ipynb
+
+# Too large for GitHub (>100 MB) – pipeline inputs kept locally
+*_modelled_KVES.gpkg
+# Large model outputs (~38 MB each)
+*_WGS84.tif
+
+# Extracted copy of data/raw/evl.zip (recreated by R/01_download.R)
+data/raw/evl/

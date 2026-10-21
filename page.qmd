@@ -1,0 +1,372 @@
+---
+params:
+  lang: cs
+date: today
+format:
+  html:
+    embed-resources: true
+    code-fold: true
+    toc: true
+    toc-depth: 2
+    theme: cosmo
+    css: assets/page.css
+    fig-responsive: true
+execute:
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(DT)
+library(htmltools)
+library(yaml)
+library(here)
+
+source(here("R", "i18n.R"))
+
+lang <- params$lang
+strings <- read_strings()
+tr <- translator(strings, lang)
+fmt_num <- number_formatter(tr)
+fmt_date <- date_formatter(lang)
+tr_kves <- kves_translator(strings, lang)
+fmt_pct <- \(x) tr("fmt_pct", x = fmt_num(x, 0.1))
+fmt_pclass <- \(lo, hi) paste0(fmt_num(lo, 0.1), "–", fmt_num(hi, 0.1))
+
+# Processed data only (see R/02_process.R and R/03_web.R)
+proc <- here("data", "processed")
+meta <- read_yaml(file.path(proc, "metadata.yml"))
+web_meta <- read_yaml(file.path(proc, "web_metadata.yml"))
+site_summary <- read_csv(file.path(proc, "site_summary.csv"), show_col_types = FALSE)
+breakdown <- read_csv(file.path(proc, "habitat_breakdown.csv"), show_col_types = FALSE)
+site_bounds <- read_csv(file.path(proc, "site_bounds.csv"), show_col_types = FALSE)
+sites_web <- st_read(file.path(proc, "web_layers.gpkg"), layer = "sites_web", quiet = TRUE)
+habitat_web <- st_read(file.path(proc, "web_layers.gpkg"), layer = "habitat_web", quiet = TRUE)
+
+# Colour-blind-safe pair (validated: worst CVD delta E 24.7); teleius sites dashed
+species_info <- tibble(
+  species = c("nausithous", "teleius"),
+  latin = c("Phengaris nausithous", "Phengaris teleius"),
+  colour = c("#2a78d6", "#eb6834"),
+  dash = c(NA, "6 4")
+) |>
+  mutate(common = map_chr(species, \(s) tr(paste0("sp_", s))))
+
+site_tbl <- site_summary |>
+  left_join(species_info, by = "species")
+
+n_sites <- unlist(meta$n_sites)
+n_both <- site_summary |> count(site_code) |> filter(n == 2) |> nrow()
+p_min_lab <- fmt_num(meta$p_min, 0.1)
+p_class_labs <- fmt_pclass(head(meta$p_breaks, -1), meta$p_breaks[-1])
+
+# DataTables UI strings
+dt_language <- list(
+  search = tr("dt_search"),
+  lengthMenu = tr("dt_length_menu"),
+  info = tr("dt_info"),
+  infoEmpty = tr("dt_info_empty"),
+  infoFiltered = tr("dt_info_filtered"),
+  zeroRecords = tr("dt_zero_records"),
+  thousands = tr("big_mark"),
+  decimal = tr("decimal_mark"),
+  paginate = list(
+    first = tr("dt_first"), last = tr("dt_last"),
+    `next` = tr("dt_next"), previous = tr("dt_previous")
+  )
+)
+```
+
+## `r tr("sec_intro")` {#intro}
+
+```{r}
+#| child: !expr here::here("i18n", params$lang, "intro.md")
+```
+
+## `r tr("sec_methods")` {#methods}
+
+```{r}
+#| child: !expr here::here("i18n", params$lang, "methods.md")
+```
+
+## `r tr("sec_map")` {#map}
+
+`r tr("map_intro")`
+
+```{r}
+#| label: site-zoom
+# Site picker and zoom function (also used by the summary table)
+site_choices <- site_tbl |>
+  distinct(site_code, site_name) |>
+  arrange(str_rank(site_name, locale = "cs"))
+
+# Bounds as [xmin, ymin, xmax, ymax] per site code, plus "_all"
+site_bbox <- pmap(select(site_bounds, xmin, ymin, xmax, ymax), \(...) unname(c(...)))
+bounds <- c(
+  list(`_all` = with(site_bounds, c(min(xmin), min(ymin), max(xmax), max(ymax)))),
+  set_names(site_bbox, site_bounds$site_code)
+)
+
+zoom_js <- sprintf(
+  "window.phengarisBounds = %s;
+window.phengarisZoom = function(code, scroll) {
+  var el = document.getElementById('overview-map');
+  var widget = el ? HTMLWidgets.find('#overview-map') : null;
+  var b = window.phengarisBounds[code || '_all'];
+  if (!widget || !b) return;
+  widget.getMap().fitBounds([[b[1], b[0]], [b[3], b[2]]], {padding: [20, 20]});
+  var sel = document.getElementById('site-zoom');
+  if (sel) sel.value = code || '';
+  if (window.phengarisBreakdown) window.phengarisBreakdown.search(code || '').draw();
+  if (scroll) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+};",
+  jsonlite::toJSON(bounds, digits = 6, auto_unbox = FALSE)
+)
+
+tagList(
+  div(
+    class = "site-zoom",
+    tags$label(`for` = "site-zoom", tr("zoom_label")),
+    tags$select(
+      id = "site-zoom",
+      onchange = "phengarisZoom(this.value, false)",
+      tags$option(value = "", tr("zoom_all")),
+      map2(site_choices$site_code, site_choices$site_name,
+           \(code, name) tags$option(value = code, sprintf("%s (%s)", name, code)))
+    )
+  ),
+  tags$script(HTML(zoom_js))
+)
+```
+
+```{r}
+#| label: map
+fmt_ha <- \(x) paste(fmt_num(x, 0.1), tr("unit_ha"))
+
+# One popup per site, listing every species the site is designated for
+site_popups <- site_tbl |>
+  arrange(site_code, species) |>
+  mutate(sp_html = sprintf(
+    "<hr><b>%s</b> (<i>%s</i>)<br>%s: %s (%s %s)",
+    htmlEscape(common), latin, tr("pop_hab_area"), fmt_ha(habitat_ha),
+    fmt_pct(cover_pct), tr("pop_cover")
+  )) |>
+  group_by(site_code, site_name, site_area_ha) |>
+  summarise(sp_html = paste(sp_html, collapse = ""), .groups = "drop") |>
+  mutate(popup = sprintf(
+    "<b>%s</b><br>%s: %s<br>%s: %s%s",
+    htmlEscape(site_name), tr("pop_site_code"), site_code,
+    tr("pop_site_area"), fmt_ha(site_area_ha), sp_html
+  ))
+
+habitat_map <- habitat_web |>
+  left_join(species_info, by = "species") |>
+  mutate(popup = sprintf(
+    "<b>%s</b> (<i>%s</i>)<br>%s: %s<br>%s: %s<br>%s: %s<br>%s: %s",
+    htmlEscape(common), latin,
+    tr("pop_site"), htmlEscape(sprintf("%s (%s)", site_name, site_code)),
+    tr("pop_kves"), htmlEscape(tr_kves(kves)),
+    tr("pop_pclass"), fmt_pclass(p_class_lower, p_class_upper),
+    tr("pop_patch_area"), fmt_ha(area_ha)
+  ))
+
+m <- leaflet(elementId = "overview-map", width = "100%", height = 650) |>
+  addMapPane("pane_sites", zIndex = 410) |>
+  addMapPane("pane_habitat", zIndex = 420) |>
+  addProviderTiles(providers$OpenStreetMap, group = tr("base_osm")) |>
+  addProviderTiles(providers$Esri.WorldImagery, group = tr("base_aerial"))
+
+for (sp in species_info$species) {
+  info <- filter(species_info, species == sp)
+  sp_sites <- sites_web |>
+    semi_join(filter(site_tbl, species == sp), by = "site_code") |>
+    left_join(select(site_popups, site_code, site_name, popup), by = "site_code")
+  m <- m |>
+    addPolygons(
+      data = sp_sites, group = tr(paste0("grp_sites_", sp)),
+      color = info$colour, weight = 2.5, opacity = 1,
+      dashArray = if (is.na(info$dash)) NULL else info$dash,
+      fillColor = info$colour, fillOpacity = 0.04,
+      label = ~site_name, popup = ~popup,
+      options = pathOptions(pane = "pane_sites")
+    )
+}
+
+for (sp in species_info$species) {
+  info <- filter(species_info, species == sp)
+  m <- m |>
+    addPolygons(
+      data = filter(habitat_map, species == sp), group = tr(paste0("grp_hab_", sp)),
+      color = info$colour, weight = 0.6, opacity = 0.9,
+      fillColor = info$colour, fillOpacity = 0.55,
+      popup = ~popup,
+      options = pathOptions(pane = "pane_habitat")
+    )
+}
+
+legend_row <- function(swatch_style, label) {
+  div(class = "legend-row", span(class = "legend-swatch", style = swatch_style), label)
+}
+legend_html <- tagList(
+  tags$strong(tr("legend_title")),
+  pmap(species_info, \(species, colour, dash, ...) {
+    border <- if (is.na(dash)) "solid" else "dashed"
+    tagList(
+      legend_row(sprintf("border: 2.5px %s %s;", border, colour),
+                 tr(paste0("grp_sites_", species))),
+      legend_row(sprintf("background: %s; opacity: 0.7;", colour),
+                 tr(paste0("grp_hab_", species)))
+    )
+  })
+)
+
+all_bounds <- bounds[["_all"]]
+m <- m |>
+  addControl(html = as.character(legend_html), position = "bottomright",
+             className = "info legend phengaris-legend") |>
+  addScaleBar(position = "bottomleft", options = scaleBarOptions(imperial = FALSE)) |>
+  addLayersControl(
+    baseGroups = c(tr("base_osm"), tr("base_aerial")),
+    overlayGroups = c(
+      map_chr(species_info$species, \(s) tr(paste0("grp_sites_", s))),
+      map_chr(species_info$species, \(s) tr(paste0("grp_hab_", s)))
+    ),
+    options = layersControlOptions(collapsed = FALSE)
+  ) |>
+  fitBounds(all_bounds[1], all_bounds[2], all_bounds[3], all_bounds[4])
+
+# ~1 m coordinate precision is plenty for display and keeps the page light
+attr(m$x, "TOJSON_ARGS") <- list(digits = 5)
+m
+```
+
+## `r tr("sec_table")` {#table}
+
+`r tr("table_intro")`
+
+```{r}
+#| label: summary-table
+#| column: page-left
+summary_tbl <- site_tbl |>
+  arrange(species, desc(habitat_ha), site_code) |>
+  transmute(
+    !!tr("col_site_code") := site_code,
+    !!tr("col_site_name") := site_name,
+    !!tr("col_species") := common,
+    !!tr("col_site_area") := site_area_ha,
+    !!tr("col_hab_area") := habitat_ha,
+    !!tr("col_cover") := cover_pct,
+    !!tr("col_below", p_min = p_min_lab) := below_threshold_ha,
+    !!tr("col_n_straddle") := n_straddling,
+    !!tr("col_cut_off") := cut_off_ha,
+    !!tr("col_flag") := if_else(flag_zero_habitat, tr("flag_zero"), "")
+  )
+
+num_cols <- names(summary_tbl)[4:9]
+datatable(
+  summary_tbl,
+  elementId = "summary-table",
+  rownames = FALSE,
+  selection = "none",
+  class = "compact stripe hover",
+  options = list(
+    language = dt_language,
+    pageLength = 15,
+    lengthMenu = c(15, 30, 60),
+    order = list(),
+    scrollX = TRUE,
+    columnDefs = list(list(className = "dt-right", targets = 3:8))
+  ),
+  callback = JS(
+    "table.on('click', 'tbody tr', function() {",
+    "  var d = table.row(this).data();",
+    "  if (d) phengarisZoom(d[0], true);",
+    "});"
+  )
+) |>
+  formatRound(num_cols[-5], digits = 1, mark = tr("big_mark"), dec.mark = tr("decimal_mark")) |>
+  formatRound(num_cols[5], digits = 0, mark = tr("big_mark"), dec.mark = tr("decimal_mark"))
+```
+
+## `r tr("sec_site")` {#site}
+
+`r tr("site_intro")`
+
+```{r}
+#| label: breakdown-table
+breakdown_tbl <- breakdown |>
+  left_join(species_info, by = "species") |>
+  mutate(name_rank = str_rank(site_name, locale = "cs")) |>
+  arrange(name_rank, species, kves, p_class_lower) |>
+  transmute(
+    !!tr("col_site_code") := site_code,
+    !!tr("col_site_name") := site_name,
+    !!tr("col_species") := common,
+    !!tr("col_kves") := tr_kves(kves),
+    !!tr("col_pclass") := fmt_pclass(p_class_lower, p_class_upper),
+    !!tr("col_area") := area_ha,
+    !!tr("col_share") := share_of_site_habitat_pct
+  )
+
+datatable(
+  breakdown_tbl,
+  elementId = "breakdown-table",
+  rownames = FALSE,
+  selection = "none",
+  class = "compact stripe hover",
+  options = list(
+    language = dt_language,
+    pageLength = 15,
+    lengthMenu = c(15, 30, 60, 120),
+    order = list(),
+    scrollX = TRUE,
+    columnDefs = list(list(className = "dt-right", targets = 5:6))
+  ),
+  callback = JS("window.phengarisBreakdown = table;")
+) |>
+  formatRound(names(breakdown_tbl)[6], digits = 2,
+              mark = tr("big_mark"), dec.mark = tr("decimal_mark")) |>
+  formatRound(names(breakdown_tbl)[7], digits = 1,
+              mark = tr("big_mark"), dec.mark = tr("decimal_mark"))
+```
+
+## `r tr("sec_chart")` {#chart}
+
+```{r}
+#| label: chart
+#| fig-width: 8
+#| fig-height: 11
+#| fig-alt: !expr tr("chart_alt")
+#| fig-cap: !expr tr("chart_caption", p_min = p_min_lab)
+chart_data <- site_tbl |>
+  mutate(
+    panel = factor(common, levels = species_info$common),
+    row = fct_reorder(paste(site_name, species, sep = "__"), habitat_ha)
+  )
+
+ggplot(chart_data, aes(x = habitat_ha, y = row, fill = species)) +
+  geom_col(width = 0.72) +
+  geom_text(aes(label = fmt_num(habitat_ha, 0.1)),
+            hjust = -0.15, size = 3, colour = "#52514e") +
+  facet_grid(rows = vars(panel), scales = "free_y", space = "free_y") +
+  scale_y_discrete(labels = \(x) sub("__.*$", "", x)) +
+  scale_x_continuous(labels = \(x) fmt_num(x, 1),
+                     expand = expansion(mult = c(0, 0.12))) +
+  scale_fill_manual(values = set_names(species_info$colour, species_info$species),
+                    guide = "none") +
+  labs(x = tr("chart_x"), y = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_line(colour = "#e1e0d9", linewidth = 0.3),
+    axis.text.y = element_text(colour = "#0b0b0b"),
+    axis.title.x = element_text(colour = "#52514e", margin = margin(t = 8)),
+    strip.text.y = element_text(face = "bold", size = 11),
+    plot.background = element_rect(fill = "white", colour = NA)
+  )
+```

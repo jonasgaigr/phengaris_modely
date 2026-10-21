@@ -1,0 +1,6 @@
+project:
+  type: default
+  # Only the page template is a document; i18n/*/*.md are knitr children.
+  # Render both languages with render.R.
+  render:
+    - page.qmd

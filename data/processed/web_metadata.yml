@@ -1,0 +1,4 @@
+keep_habitat: 0.15
+keep_sites: 0.15
+n_patches: 784
+merge_area_diff_ha: -4.0071027e-06

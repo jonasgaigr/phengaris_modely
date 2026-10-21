@@ -1,0 +1,33 @@
+processed: '2026-10-20'
+crs_work: 5514.0
+p_min: 0.7
+p_breaks:
+- 0.7
+- 0.8
+- 0.9
+- 1.0
+straddle_tol_ha: 0.0001
+evl_updated: '2025-01-20'
+sources:
+  evl:
+    file: evl.zip
+    url: https://data.nature.cz/ds/8/download
+    page: https://data.nature.cz/ds/8
+    downloaded: '2026-10-20'
+  features:
+    file: seznam_predmetolokalit_Natura2000_2_2025.xlsx
+    url: https://webgis.nature.cz/publicdocs/opendata/natura2000/seznam_predmetolokalit_Natura2000_2_2025.xlsx
+    page: https://data.nature.cz/ds/8
+    downloaded: '2026-10-20'
+  habitat:
+    nausithous: nausithous_modelled_KVES.gpkg
+    teleius: teleius_modelled_KVES.gpkg
+n_sites:
+  nausithous: 36
+  teleius: 18
+habitat_total_ha:
+  nausithous: 11977.4486238
+  teleius: 11534.2765776
+union_check_diff_ha:
+  nausithous: 0.0003493
+  teleius: 0.0006414

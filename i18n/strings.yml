@@ -1,0 +1,261 @@
+# User-facing strings for page.qmd, keyed by ID. Every key needs both cs and en.
+# Placeholders in {braces} are filled by tr("key", name = value).
+
+# --- Page ----------------------------------------------------------------------
+title:
+  cs: "Preferovaný biotop modráska bahenního a modráska očkovaného v evropsky významných lokalitách"
+  en: "Preferred habitat of the Dusky Large Blue and the Scarce Large Blue in Sites of Community Importance"
+subtitle:
+  cs: "Modelovaný biotop uvnitř EVL, v nichž jsou druhy předmětem ochrany"
+  en: "Modelled habitat within the SCIs where the species are qualifying features"
+lang_switch:
+  cs: "English"
+  en: "Česky"
+lang_switch_href:
+  cs: "index-en.html"
+  en: "index.html"
+lang_switch_hreflang:
+  cs: "en"
+  en: "cs"
+
+# --- Number and date formatting ---------------------------------------------------
+big_mark:
+  cs: " "
+  en: ","
+decimal_mark:
+  cs: ","
+  en: "."
+unit_ha:
+  cs: "ha"
+  en: "ha"
+fmt_pct:
+  cs: "{x} %"
+  en: "{x}%"
+
+# --- Section headings ----------------------------------------------------------
+sec_intro:
+  cs: "Úvod"
+  en: "Introduction"
+sec_methods:
+  cs: "Data a metody"
+  en: "Data and methods"
+sec_map:
+  cs: "Přehledová mapa"
+  en: "Overview map"
+sec_table:
+  cs: "Souhrnná tabulka"
+  en: "Summary table"
+sec_site:
+  cs: "Detail lokality"
+  en: "Site-level view"
+sec_chart:
+  cs: "Plocha preferovaného biotopu v lokalitách"
+  en: "Preferred habitat area by site"
+
+# --- Species -------------------------------------------------------------------
+sp_nausithous:
+  cs: "modrásek bahenní"
+  en: "Dusky Large Blue"
+sp_teleius:
+  cs: "modrásek očkovaný"
+  en: "Scarce Large Blue"
+
+# --- Map -----------------------------------------------------------------------
+map_intro:
+  cs: "Hranice EVL jsou zobrazeny obrysem v barvě druhu, pro který je lokalita vymezena, preferovaný biotop plochou. Vrstvy a podkladovou mapu lze přepínat v pravém horním rohu mapy. Kliknutím na lokalitu nebo plochu biotopu se zobrazí podrobnosti. V lokalitách, kde jsou předmětem ochrany oba druhy, se biotopy obou druhů překrývají; jednotlivé vrstvy lze vypnout."
+  en: "SCI boundaries are drawn as outlines in the colour of the species they are designated for, preferred habitat as filled areas. Layers and the basemap can be switched in the top-right corner of the map. Click a site or a habitat patch for details. In sites where both species are qualifying features, the habitats of the two species overlap; switch layers off to see each one."
+zoom_label:
+  cs: "Přiblížit na lokalitu:"
+  en: "Zoom to site:"
+zoom_all:
+  cs: "– všechny lokality –"
+  en: "– all sites –"
+base_osm:
+  cs: "OpenStreetMap"
+  en: "OpenStreetMap"
+base_aerial:
+  cs: "Letecké snímky (Esri)"
+  en: "Aerial imagery (Esri)"
+grp_sites_nausithous:
+  cs: "EVL – modrásek bahenní"
+  en: "SCIs – Dusky Large Blue"
+grp_sites_teleius:
+  cs: "EVL – modrásek očkovaný"
+  en: "SCIs – Scarce Large Blue"
+grp_hab_nausithous:
+  cs: "Preferovaný biotop – modrásek bahenní"
+  en: "Preferred habitat – Dusky Large Blue"
+grp_hab_teleius:
+  cs: "Preferovaný biotop – modrásek očkovaný"
+  en: "Preferred habitat – Scarce Large Blue"
+legend_title:
+  cs: "Legenda"
+  en: "Legend"
+
+# --- Popups --------------------------------------------------------------------
+pop_site_code:
+  cs: "Kód lokality"
+  en: "Site code"
+pop_site_area:
+  cs: "Rozloha EVL"
+  en: "SCI area"
+pop_species:
+  cs: "Druh"
+  en: "Species"
+pop_hab_area:
+  cs: "Preferovaný biotop"
+  en: "Preferred habitat"
+pop_cover:
+  cs: "podíl z rozlohy EVL"
+  en: "share of SCI area"
+pop_site:
+  cs: "Lokalita"
+  en: "Site"
+pop_kves:
+  cs: "Kategorie KVES"
+  en: "KVES category"
+pop_pclass:
+  cs: "Pravděpodobnost výskytu (model)"
+  en: "Modelled probability of occurrence"
+pop_patch_area:
+  cs: "Plocha této kategorie a třídy v lokalitě"
+  en: "Area of this category and class in the site"
+
+# --- Summary table ---------------------------------------------------------------
+table_intro:
+  cs: "Jeden řádek odpovídá jedné kombinaci lokality a druhu. Tabulku lze řadit kliknutím na záhlaví sloupce a prohledávat. Kliknutím na řádek se mapa přiblíží na danou lokalitu. Sloupec „Plocha vně EVL“ udává, jaká část polygonů preferovaného biotopu, které přesahují hranici lokality, leží mimo ni a do výsledku se nezapočítává."
+  en: "Each row is one site–species combination. Click a column header to sort, or use the search box. Click a row to zoom the map to that site. The column “Area outside SCI” gives the part of preferred-habitat polygons crossing the site boundary that lies outside the site and is not counted."
+col_site_code:
+  cs: "Kód lokality"
+  en: "Site code"
+col_site_name:
+  cs: "Název lokality"
+  en: "Site name"
+col_species:
+  cs: "Druh"
+  en: "Species"
+col_site_area:
+  cs: "Rozloha EVL (ha)"
+  en: "SCI area (ha)"
+col_hab_area:
+  cs: "Preferovaný biotop (ha)"
+  en: "Preferred habitat (ha)"
+col_cover:
+  cs: "Podíl z rozlohy EVL (%)"
+  en: "Share of SCI area (%)"
+col_below:
+  cs: "Modelovaný biotop s p < {p_min} (ha)"
+  en: "Modelled habitat with p < {p_min} (ha)"
+col_n_straddle:
+  cs: "Polygony přesahující hranici EVL"
+  en: "Polygons crossing the SCI boundary"
+col_cut_off:
+  cs: "Plocha vně EVL (ha)"
+  en: "Area outside SCI (ha)"
+col_flag:
+  cs: "Upozornění"
+  en: "Flag"
+flag_zero:
+  cs: "bez preferovaného biotopu"
+  en: "no preferred habitat"
+col_kves:
+  cs: "Kategorie KVES"
+  en: "KVES category"
+col_pclass:
+  cs: "Pravděpodobnost výskytu"
+  en: "Probability of occurrence"
+col_area:
+  cs: "Plocha (ha)"
+  en: "Area (ha)"
+col_share:
+  cs: "Podíl z preferovaného biotopu lokality (%)"
+  en: "Share of the site’s preferred habitat (%)"
+
+# --- Site-level view -----------------------------------------------------------
+site_intro:
+  cs: "Tabulka rozděluje preferovaný biotop každé lokality podle kategorie KVES a třídy modelové pravděpodobnosti výskytu. Výběrem lokality v seznamu nad mapou nebo kliknutím na řádek souhrnné tabulky se mapa přiblíží na lokalitu a tato tabulka se omezí na její řádky."
+  en: "The table breaks down the preferred habitat of each site by KVES category and by class of modelled probability of occurrence. Selecting a site in the list above the map, or clicking a row of the summary table, zooms the map to the site and limits this table to its rows."
+
+# --- DataTables UI ---------------------------------------------------------------
+dt_search:
+  cs: "Hledat:"
+  en: "Search:"
+dt_length_menu:
+  cs: "Zobrazit _MENU_ záznamů"
+  en: "Show _MENU_ entries"
+dt_info:
+  cs: "Záznamy _START_ až _END_ z celkem _TOTAL_"
+  en: "Showing _START_ to _END_ of _TOTAL_ entries"
+dt_info_empty:
+  cs: "Žádné záznamy"
+  en: "No entries"
+dt_info_filtered:
+  cs: "(vyfiltrováno z _MAX_ záznamů)"
+  en: "(filtered from _MAX_ entries)"
+dt_zero_records:
+  cs: "Nebyly nalezeny žádné odpovídající záznamy"
+  en: "No matching records found"
+dt_first:
+  cs: "První"
+  en: "First"
+dt_last:
+  cs: "Poslední"
+  en: "Last"
+dt_next:
+  cs: "Další"
+  en: "Next"
+dt_previous:
+  cs: "Předchozí"
+  en: "Previous"
+
+# --- Chart ---------------------------------------------------------------------
+chart_x:
+  cs: "Plocha preferovaného biotopu (ha)"
+  en: "Preferred habitat area (ha)"
+chart_alt:
+  cs: "Vodorovný sloupcový graf plochy preferovaného biotopu v jednotlivých EVL, zvlášť pro modráska bahenního a modráska očkovaného, lokality seřazené podle plochy."
+  en: "Horizontal bar chart of preferred habitat area in each SCI, separately for the Dusky Large Blue and the Scarce Large Blue, sites ordered by area."
+chart_caption:
+  cs: "Preferovaný biotop = modelová pravděpodobnost výskytu p ≥ {p_min}. Lokality s nulovou hodnotou nemají uvnitř hranice žádný preferovaný biotop."
+  en: "Preferred habitat = modelled probability of occurrence p ≥ {p_min}. Sites with a value of zero have no preferred habitat inside their boundary."
+
+# --- KVES categories (cs = value of KATEGORIE in the habitat layers) ------------
+kves_aluvialni_a_vlhke_louky:
+  cs: "Aluviální a vlhké louky"
+  en: "Alluvial and wet meadows"
+kves_degradovany_travni_porost:
+  cs: "Degradovaný travní porost"
+  en: "Degraded grassland"
+kves_dopravni_sit:
+  cs: "Dopravní síť"
+  en: "Transport network"
+kves_hospodarske_lesy_smisene:
+  cs: "Hospodářské lesy smíšené"
+  en: "Mixed managed forests"
+kves_mezofilni_louky:
+  cs: "Mezofilní louky"
+  en: "Mesic meadows"
+kves_mokrady_a_pobrezni_vegetace:
+  cs: "Mokřady a pobřežní vegetace"
+  en: "Wetlands and riparian vegetation"
+kves_nepuvodni_kroviny:
+  cs: "Nepůvodní křoviny"
+  en: "Non-native shrubland"
+kves_orna_puda:
+  cs: "Orná půda"
+  en: "Arable land"
+kves_ovocny_sad_zahrada:
+  cs: "Ovocný sad, zahrada"
+  en: "Orchards and gardens"
+kves_raseliniste_a_prameniste:
+  cs: "Rašeliniště a prameniště"
+  en: "Mires and springs"
+kves_rozptylena_zelen:
+  cs: "Rozptýlená zeleň"
+  en: "Scattered trees and shrubs"
+kves_souvisla_zastavba:
+  cs: "Souvislá zástavba"
+  en: "Continuous built-up area"
+kves_suche_travniky:
+  cs: "Suché trávníky"
+  en: "Dry grasslands"
