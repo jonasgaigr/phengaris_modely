@@ -7,7 +7,7 @@
 
 ### Souřadnicový systém
 
-Všechny geometrické operace a výpočty ploch probíhají v systému S-JTSK / Krovak East North (EPSG:`r meta$crs_work`) na nezjednodušených geometriích. Mapa na této stránce používá WGS 84 (EPSG:4326) a zjednodušené geometrie, které slouží jen k zobrazení.
+Všechny geometrické operace a výpočty ploch probíhají v systému S-JTSK / Krovak East North (EPSG:`r meta$crs_work`) na nezjednodušených geometriích. Mapa na této stránce zobrazuje tytéž geometrie převedené do WGS 84 (EPSG:4326).
 
 ### Postup zpracování
 
@@ -17,7 +17,7 @@ Všechny geometrické operace a výpočty ploch probíhají v systému S-JTSK / 
 4. Vrstva každého druhu byla protnuta jen s lokalitami, kde je daný druh předmětem ochrany.
 5. Rozloha lokality je spočtena z polygonu EVL a může se nepatrně lišit od úředně vedené rozlohy. Podíl biotopu je vztažen k této spočtené rozloze.
 6. Součet ploch biotopu za lokality byl ověřen proti celkové ploše protnuté vrstvy a proti ploše jejího sjednocení, žádná plocha tedy není započtena dvakrát.
-7. Pro mapu byl preferovaný biotop sloučen podle lokality, kategorie KVES a třídy pravděpodobnosti, převeden do WGS 84 a zjednodušen nástrojem mapshaper (ponecháno `r tr("fmt_pct", x = fmt_num(100 * web_meta$keep_habitat, 1))` vrcholů, žádný polygon nebyl vypuštěn). Plochy v mapě i v tabulkách pocházejí z nezjednodušených geometrií.
+7. Pro mapu byl preferovaný biotop sloučen podle lokality, kategorie KVES a třídy pravděpodobnosti. Biotop i hranice EVL byly převedeny do WGS 84 a byly z nich odstraněny jen nadbytečné vrcholy (algoritmus Douglas–Peucker s tolerancí `r fmt_num(web_meta$simplify_tol_m, 0.1)` m, žádný polygon ani otvor nebyl vypuštěn). Souřadnice jsou uloženy na `r web_meta$coord_digits` desetinných míst, obrysy v mapě se tak od zpracovaných geometrií odchylují nejvýše o `r fmt_num(web_meta$max_offset_m, 0.1)` m. Plochy v mapě i v tabulkách pocházejí z nezjednodušených geometrií.
 
 ### Vymezení „uvnitř EVL“
 

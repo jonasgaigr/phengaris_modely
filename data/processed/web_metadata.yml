@@ -1,4 +1,8 @@
-keep_habitat: 0.15
-keep_sites: 0.15
+simplify_tol_m: 0.1
+coord_digits: 6
+max_offset_m: 0.2
 n_patches: 784
+n_parts: 38394
+n_vertices: 933806
+n_vertices_unsimplified: 1176076
 merge_area_diff_ha: -4.0071027e-06

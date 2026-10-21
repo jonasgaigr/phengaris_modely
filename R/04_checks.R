@@ -211,6 +211,45 @@ check("every xlsx site x species is in the table (and nothing else)",
       sprintf("xlsx %d, table %d, missing %d, extra %d", nrow(xlsx_sites),
               nrow(table_sites), nrow(missing), nrow(extra)))
 
+# --- 7. The map draws the web layers vertex for vertex -----------------------------------
+# Catches lossy serialisation (htmlwidgets rounds to significant digits by default)
+web_gpkg <- here("data/processed/web_layers.gpkg")
+web_meta <- read_yaml(here("data/processed/web_metadata.yml"))
+sites_web <- st_read(web_gpkg, layer = "sites_web", quiet = TRUE)
+habitat_web <- st_read(web_gpkg, layer = "habitat_web", quiet = TRUE)
+
+# Expected features per map group, in the order page.qmd adds them
+expected <- list()
+for (sp in c("nausithous", "teleius")) {
+  sp_sites <- filter(summary_csv, species == sp)
+  expected[[strings[[paste0("grp_sites_", sp)]]$cs]] <-
+    semi_join(sites_web, sp_sites, by = "site_code")
+  expected[[strings[[paste0("grp_hab_", sp)]]$cs]] <- filter(habitat_web, species == sp)
+}
+drawn <- widget_json(corpus$cs$doc, "overview-map")$x$calls |>
+  keep(\(call) call$method == "addPolygons")
+names(drawn) <- map_chr(drawn, \(call) call$args[[3]])
+
+# Largest coordinate difference per group (Inf if the vertex lists differ in length)
+max_offset_deg <- imap_dbl(expected, \(layer, group) {
+  if (is.null(drawn[[group]])) return(Inf)
+  page_xy <- drawn[[group]]$args[[1]] |>
+    map(list_flatten) |>
+    list_flatten() |>
+    map(\(ring) cbind(unlist(ring$lng), unlist(ring$lat))) |>
+    do.call(what = rbind)
+  layer_xy <- unname(st_coordinates(layer)[, c("X", "Y")])
+  if (!identical(dim(page_xy), dim(layer_xy))) return(Inf)
+  max(abs(page_xy - layer_xy))
+})
+rounding_deg <- 0.5 * 10^-web_meta$coord_digits
+check(
+  "map: page draws the web layers vertex for vertex (up to coordinate rounding)",
+  all(max_offset_deg <= rounding_deg * (1 + 1e-6)),
+  sprintf("%d groups, max offset %.2g deg (~%.2f m), allowed %.2g deg",
+          length(expected), max(max_offset_deg), max(max_offset_deg) * 111320, rounding_deg)
+)
+
 # --- Sizes ------------------------------------------------------------------------------------
 cat("\nRendered file sizes:\n")
 walk(pages, \(p) cat(sprintf("  %-14s %6.1f MB\n", basename(p), file.size(p) / 1e6)))

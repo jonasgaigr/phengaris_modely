@@ -7,7 +7,7 @@
 
 ### Coordinate reference system
 
-All geometry operations and area calculations use S-JTSK / Krovak East North (EPSG:`r meta$crs_work`) on unsimplified geometries. The map on this page uses WGS 84 (EPSG:4326) and simplified geometries, for display only.
+All geometry operations and area calculations use S-JTSK / Krovak East North (EPSG:`r meta$crs_work`) on unsimplified geometries. The map on this page shows these geometries transformed to WGS 84 (EPSG:4326).
 
 ### Processing steps
 
@@ -17,7 +17,7 @@ All geometry operations and area calculations use S-JTSK / Krovak East North (EP
 4. Each species' layer was intersected only with the sites where that species is a qualifying feature.
 5. Site area is calculated from the SCI polygon and may differ slightly from the official area in the register. Habitat cover refers to this calculated area.
 6. The habitat area summed over sites was checked against the total area of the intersected layer and against the area of its union, so no area is counted twice.
-7. For the map, preferred habitat was merged by site, KVES category and probability class, transformed to WGS 84 and simplified with mapshaper (`r tr("fmt_pct", x = fmt_num(100 * web_meta$keep_habitat, 1))` of vertices kept, no polygon dropped). Areas shown in the map and in the tables come from the unsimplified geometries.
+7. For the map, preferred habitat was merged by site, KVES category and probability class. Habitat and SCI boundaries were transformed to WGS 84 with only redundant vertices removed (Douglas–Peucker, tolerance `r fmt_num(web_meta$simplify_tol_m, 0.1)` m; no polygon or hole dropped), and coordinates are stored to `r web_meta$coord_digits` decimal places, so the outlines in the map lie within `r fmt_num(web_meta$max_offset_m, 0.1)` m of the processed geometries. Areas shown in the map and in the tables come from the unsimplified geometries.
 
 ### How “within the SCI” is defined
 

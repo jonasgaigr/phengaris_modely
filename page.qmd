@@ -239,8 +239,9 @@ m <- m |>
   ) |>
   fitBounds(all_bounds[1], all_bounds[2], all_bounds[3], all_bounds[4])
 
-# ~1 m coordinate precision is plenty for display and keeps the page light
-attr(m$x, "TOJSON_ARGS") <- list(digits = 5)
+# Fixed decimal places: htmlwidgets otherwise counts significant digits, and
+# 5 significant digits would snap every vertex to a ~100 m grid
+attr(m$x, "TOJSON_ARGS") <- list(digits = web_meta$coord_digits, use_signif = FALSE)
 m
 ```
 
