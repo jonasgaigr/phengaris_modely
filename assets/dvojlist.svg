@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AOPK CR - DVOJLIST (doplnkovy graficky prvek).
+  Geometry traced 1:1 from "01_Graficky manual AOPK 2026-Hlavni cast.pdf" page 12
+  via `pdftocairo -svg`: path #source-8 placed at (153,642) and #source-5 at
+  (201,616); both carried an 80 % opacity mask in the source PDF.
+  Manual rule (p. 12): "Barvy: svetle zelena a oranzova barva, obe s pruhlednosti 80 %."
+  Colours are the manual's stated RGB values (p. 10) and can be overridden with
+  the CSS custom properties named aopk-leaf-orange / aopk-leaf-green.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dvojlist AOPK CR"
+     width="167.895" height="71.133" viewBox="153.449 617.305 167.895 71.133">
+  <g transform="translate(153,642)" opacity="0.8">
+    <path fill="#F68B1F" fill-rule="nonzero"
+          d="M 87.980469 46.4375 C 77.691406 22.878906 55.9375 1.617188 13.636719 1.613281 C 9.988281 1.613281 6.195312 1.773438 2.234375 2.101562 C 0.449219 18.394531 3.886719 33.769531 11.882812 46.4375 Z M 87.980469 46.4375 "/>
+  </g>
+  <g transform="translate(201,616)" opacity="0.8">
+    <path fill="#8CC83C" fill-rule="nonzero"
+          d="M 98.6875 72.4375 C 113.566406 53.445312 120.34375 28.597656 117.585938 1.980469 C 112.402344 1.523438 107.429688 1.304688 102.652344 1.304688 C 42.109375 1.304688 13.714844 36.429688 1.921875 72.4375 Z M 98.6875 72.4375 "/>
+  </g>
+</svg>

@@ -1,0 +1,151 @@
+/*-- scss:defaults --*/
+// AOPK ČR web style, from Grafický manuál AOPK 2026 – WEB:
+// colours p. 3, type p. 2, table p. 13, divider p. 12.
+// Font files and the header, footer and widget rules are in page.css (relative
+// url()s there are embedded by Quarto; from this compiled theme they are not).
+
+// Base colours
+$aopk-green: #006c4e;        // headings and buttons
+$aopk-orange: #b4500a;       // buttons, links and highlights (agency orange darkened for contrast)
+// Supplementary colours
+$aopk-brown-dark: #36332a;   // headings and the footer's bottom strip
+$aopk-brown: #3f3b33;        // footer
+$aopk-border: #efeeed;       // borders
+$aopk-yellow: #fee49f;       // elements
+$aopk-gray: #b1b1b1;         // divider line (p. 12)
+// Brand palette of the main manual (dvojlist, accents)
+$aopk-light-green: #8cc83c;
+
+$primary: $aopk-green;
+$secondary: $aopk-brown-dark;
+$body-color: $aopk-brown-dark;
+$link-color: $aopk-orange;
+$link-decoration: underline;
+$link-hover-color: $aopk-green;
+$border-color: $aopk-border;
+
+// Pridi for main headings, Franklin Gothic for all other text; Arial is the
+// manual's prescribed alternative where Franklin Gothic is not installed
+$font-family-sans-serif: "AOPK Franklin Gothic", "Franklin Gothic Book", Arial,
+                         "Helvetica Neue", Helvetica, sans-serif;
+$headings-font-family: Pridi, Georgia, serif;
+$headings-font-weight: 700;
+$headings-color: $aopk-green;
+$font-size-root: 16px;
+$font-size-base: 1.125rem;   // normal text 18 px
+$line-height-base: 1.55;
+$h2-font-size: 2.125rem;     // H2 Pridi 34 px
+$h3-font-size: 1.5rem;       // H3 Pridi 24 px
+$h4-font-size: 1.5rem;       // H4 Franklin Gothic 24 px Bold
+$h5-font-size: 1.125rem;     // H5 Franklin Gothic 18 px Demi
+
+$code-color: $aopk-brown-dark;
+$toc-color: $aopk-brown-dark;
+
+/*-- scss:rules --*/
+h1, h2, h3 {
+  font-family: $headings-font-family;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+h3 {
+  color: $aopk-brown-dark;
+  margin-top: 2rem;
+}
+h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  color: $aopk-brown-dark;
+}
+b, strong {
+  font-weight: 600;
+}
+
+// Links in text are orange and underlined (WEB manual p. 8)
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+// Title banner = "header s nadpisem": H1 in Pridi on the agency green
+.quarto-title-banner {
+  background: $aopk-green;
+  color: #fff;
+  padding: 1.5rem 0 2.75rem;
+  margin-bottom: 2.5rem;
+
+  .quarto-title {
+    grid-column: page-start / page-end;
+    text-align: center;
+  }
+  .title {
+    font-family: $headings-font-family;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 0.9rem + 1.9vw, 2.5rem);
+    line-height: 1.2;
+    color: #fff;
+    max-width: 28em;
+    margin: 0 auto;
+  }
+  .subtitle {
+    font-family: $font-family-sans-serif;
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 1;
+    margin: 0.85rem auto 0;
+    padding: 0;
+  }
+}
+// Publication date under the banner, on the text column
+#title-block-header .quarto-title-meta {
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+.quarto-title-meta-heading {
+  color: $aopk-green;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+// Table of contents
+#TOC, nav[role="doc-toc"] {
+  font-size: 0.95rem;
+}
+#toc-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $aopk-green;
+}
+#TOC .nav-link, nav[role="doc-toc"] .nav-link {
+  color: $aopk-brown-dark;
+  text-decoration: none;
+}
+#TOC .nav-link:hover, nav[role="doc-toc"] .nav-link:hover {
+  color: $aopk-orange;
+}
+#TOC .nav-link.active, nav[role="doc-toc"] .nav-link.active {
+  color: $aopk-green;
+  font-weight: 600;
+  border-left-color: $aopk-green;
+}
+
+// Folded code
+details.code-fold > summary {
+  color: $aopk-green;
+  font-weight: 600;
+}
+div.sourceCode {
+  background-color: rgba($aopk-green, 0.04);
+  border-color: $aopk-border;
+}
+
+// Figure captions
+.figure-caption, figcaption {
+  color: $aopk-brown-dark;
+  font-size: 0.95rem;
+}

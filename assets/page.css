@@ -1,33 +1,219 @@
-/* Language switch bar at the top of the page */
-.lang-bar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 1rem 0;
-}
-.lang-bar a {
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid currentColor;
-  border-radius: 4px;
-  padding: 0.1rem 0.6rem;
+/* AOPK ČR web style (Grafický manuál AOPK 2026 – WEB). Palette and type scale
+   are in aopk.scss; this file holds what needs relative url()s (fonts, logo,
+   dvojlist), which Quarto embeds into the self-contained page. */
+
+:root {
+  --aopk-green: #006c4e;
+  --aopk-orange: #b4500a;
+  --aopk-brown-dark: #36332a;
+  --aopk-brown: #3f3b33;
+  --aopk-border: #efeeed;
+  --aopk-yellow: #fee49f;
+  --aopk-gray: #b1b1b1;
+  --aopk-tint: rgba(0, 108, 78, 0.05); /* 5 % #006c4e, table stripes (p. 13) */
 }
 
-/* Site picker above the map */
+/* --- Fonts -------------------------------------------------------------------
+   Pridi (SIL OFL 1.1, fonts/OFL.txt) for main headings, Latin + Latin Extended
+   for Czech. Franklin Gothic is used where installed: Windows ships it as four
+   separate families, aliased here into one family with real weights; without
+   it every local() fails and the stack falls through to Arial. */
+@font-face {
+  font-family: "Pridi"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/pridi-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Pridi"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("fonts/pridi-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Pridi"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/pridi-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Pridi"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/pridi-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: normal; font-weight: 400;
+  src: local("Franklin Gothic Book"), local("FranklinGothic-Book"),
+    local("ITC Franklin Gothic Std Book");
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: italic; font-weight: 400;
+  src: local("Franklin Gothic Book Italic"), local("FranklinGothic-BookItalic"),
+    local("ITC Franklin Gothic Std Book Italic");
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: normal; font-weight: 500;
+  src: local("Franklin Gothic Medium"), local("FranklinGothic-Medium"),
+    local("ITC Franklin Gothic Std Medium");
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: normal; font-weight: 600 700;
+  src: local("Franklin Gothic Demi"), local("FranklinGothic-Demi"),
+    local("ITC Franklin Gothic Std Demi");
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: italic; font-weight: 600 700;
+  src: local("Franklin Gothic Demi Italic"), local("FranklinGothic-DemiItalic"),
+    local("ITC Franklin Gothic Std Demi Italic");
+}
+@font-face {
+  font-family: "AOPK Franklin Gothic"; font-style: normal; font-weight: 800;
+  src: local("Franklin Gothic Heavy"), local("FranklinGothic-Heavy"),
+    local("ITC Franklin Gothic Std Heavy");
+}
+
+/* --- Header: logo on the left, language switch on the right (p. 5) --------- */
+.aopk-header {
+  background: var(--aopk-green);
+  color: #fff;
+}
+.aopk-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px; /* basic grid (p. 4) */
+  margin: 0 auto;
+  padding: 1.1rem 16px;
+  /* thin rule under the logo row, as in the manual's header mockups */
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3))
+    center bottom / calc(100% - 32px) 1px no-repeat;
+}
+/* The padding around the logo exceeds its clear space: 1/5 of the pictogram's
+   width, i.e. 16 % of the logo's height */
+.aopk-logo img {
+  display: block;
+  height: 64px;
+  width: auto;
+}
+/* Outlined like the manual's search field on the green header */
+.aopk-lang {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.aopk-lang:hover,
+.aopk-lang:focus-visible {
+  color: #fff;
+  background: var(--aopk-orange);
+  border-color: var(--aopk-orange);
+}
+/* --- Section divider: grey line with the dvojlist (p. 12) ------------------- */
+#quarto-document-content > section.level2 + section.level2 {
+  margin-top: 3.5rem;
+}
+/* A grid item on the text column, also in sections widened by a wide table */
+#quarto-document-content > section.level2 + section.level2::before {
+  content: "";
+  display: block;
+  grid-column: body-content-start / body-content-end;
+  height: 22px;
+  margin-bottom: 3rem;
+  background:
+    url("dvojlist.svg") center bottom / auto 22px no-repeat,
+    linear-gradient(var(--aopk-gray), var(--aopk-gray)) center bottom / 100% 1px no-repeat;
+}
+
+/* --- Site picker above the map ---------------------------------------------- */
 .site-zoom {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.75rem 0;
+  gap: 0.5rem 0.75rem;
+  margin: 1.25rem 0 0.75rem;
+}
+.site-zoom label {
+  font-weight: 600;
+  color: var(--aopk-green);
 }
 .site-zoom select {
   max-width: 100%;
-  padding: 0.25rem 0.4rem;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--aopk-brown-dark);
+  background-color: #fff;
+  border: 1px solid var(--aopk-green);
+  border-radius: 3px;
+  padding: 0.35rem 0.6rem;
+}
+.site-zoom select:focus-visible {
+  outline: 2px solid var(--aopk-orange);
+  outline-offset: 1px;
+}
+
+/* --- Map ---------------------------------------------------------------------- */
+#overview-map {
+  border: 1px solid var(--aopk-border);
+}
+.leaflet-container {
+  font-family: var(--bs-body-font-family);
+  font-size: 0.9rem;
+}
+.leaflet-container a {
+  color: var(--aopk-orange);
+}
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  color: var(--aopk-green);
+}
+.leaflet-control-layers,
+.leaflet-bar,
+.phengaris-legend.info {
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(54, 51, 42, 0.3);
+}
+.leaflet-control-layers-expanded {
+  padding: 0.5rem 0.75rem;
+  color: var(--aopk-brown-dark);
+}
+.leaflet-control-layers-separator {
+  border-top-color: var(--aopk-border);
+}
+.leaflet-control-layers input {
+  accent-color: var(--aopk-green);
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 3px;
+}
+.leaflet-popup-content {
+  color: var(--aopk-brown-dark);
+  line-height: 1.45;
+}
+.leaflet-popup-content b:first-child {
+  color: var(--aopk-green);
+}
+.leaflet-popup-content hr {
+  border-color: var(--aopk-gray);
+  margin: 0.5rem 0;
 }
 
 /* Map legend */
 .phengaris-legend {
   line-height: 1.3;
+  color: var(--aopk-brown-dark);
+}
+.phengaris-legend strong {
+  color: var(--aopk-green);
 }
 .phengaris-legend .legend-row {
   display: flex;
@@ -55,12 +241,135 @@
   box-sizing: border-box;
 }
 
-/* Compact tables so all columns fit */
+/* --- Tables (p. 13): green header row with white bold text; odd columns and
+   even rows tinted 5 % #006c4e, overlapping where both apply --------------- */
 .dataTables_wrapper {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--aopk-brown-dark);
+}
+table.dataTable.compact tbody td {
+  padding: 0.35rem 0.5rem;
+}
+table.dataTable thead th,
+table.dataTable thead td {
+  background-color: var(--aopk-green);
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 0 !important;
+  vertical-align: bottom;
+}
+table.dataTable tbody tr.even > * {
+  background-color: var(--aopk-tint);
+}
+table.dataTable tbody td:nth-child(odd) {
+  background-image: linear-gradient(var(--aopk-tint), var(--aopk-tint));
+}
+table.dataTable.hover > tbody > tr:hover > * {
+  box-shadow: inset 0 0 0 9999px rgba(254, 228, 159, 0.65); /* #fee49f */
+}
+table.dataTable.no-footer,
+.dataTables_scrollBody {
+  border-bottom-color: var(--aopk-green) !important;
+}
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  border: 1px solid var(--aopk-gray);
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+}
+.dataTables_wrapper .dataTables_filter input:focus-visible,
+.dataTables_wrapper .dataTables_length select:focus-visible {
+  outline: 2px solid var(--aopk-orange);
+  outline-offset: 1px;
+}
+/* Pagination as the manual's buttons: green, orange on mouse-over */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 3px;
+  color: var(--aopk-green) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: var(--aopk-green) !important;
+  border-color: var(--aopk-green) !important;
+  color: #fff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:not(.disabled):hover {
+  background: var(--aopk-orange) !important;
+  border-color: var(--aopk-orange) !important;
+  color: #fff !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+  color: var(--aopk-gray) !important;
 }
 
 /* Summary table rows zoom the map */
 #summary-table tbody tr {
   cursor: pointer;
+}
+
+/* --- Footer (p. 6): brown with white text, logo on the right ---------------- */
+.aopk-footer {
+  margin-top: 4rem;
+  background: var(--aopk-brown);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.aopk-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 16px;
+}
+.aopk-footer-col {
+  flex: 0 1 260px;
+}
+.aopk-footer-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0 0 0.75rem;
+}
+.aopk-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.aopk-footer li {
+  margin: 0.3rem 0;
+}
+.aopk-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.aopk-footer a:hover,
+.aopk-footer a:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+.aopk-footer-logo {
+  margin-left: auto;
+  align-self: flex-start;
+}
+.aopk-footer-logo img {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+.aopk-footer-bar {
+  background: var(--aopk-brown-dark);
+  padding: 0.75rem 16px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 575.98px) {
+  .aopk-logo img {
+    height: 48px;
+  }
+  .aopk-footer-logo {
+    margin-left: 0;
+  }
 }

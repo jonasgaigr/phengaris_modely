@@ -18,6 +18,26 @@ lang_switch_hreflang:
   cs: "en"
   en: "cs"
 
+# --- Header and footer (AOPK ČR web style) ---------------------------------------
+aopk_name:
+  cs: "Agentura ochrany přírody a krajiny ČR"
+  en: "Nature Conservation Agency of the Czech Republic"
+footer_contents:
+  cs: "Obsah stránky"
+  en: "On this page"
+footer_sources:
+  cs: "Zdroje dat"
+  en: "Data sources"
+src_evl:
+  cs: "Evropsky významné lokality"
+  en: "Sites of Community Importance"
+src_features:
+  cs: "Předměty ochrany lokalit Natura 2000"
+  en: "Qualifying features of Natura 2000 sites"
+src_ndop:
+  cs: "Nálezová databáze ochrany přírody"
+  en: "Species Occurrence Database"
+
 # --- Number and date formatting ---------------------------------------------------
 big_mark:
   cs: " "

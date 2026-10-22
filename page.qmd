@@ -8,8 +8,11 @@ format:
     code-fold: true
     toc: true
     toc-depth: 2
-    theme: cosmo
+    # AOPK ČR web style (Grafický manuál AOPK 2026 – WEB): palette and type in
+    # aopk.scss, fonts, header, footer and widgets in page.css
+    theme: [cosmo, assets/aopk.scss]
     css: assets/page.css
+    title-block-banner: true
     fig-responsive: true
 execute:
   message: false
@@ -328,7 +331,7 @@ datatable(
   elementId = "summary-table",
   rownames = FALSE,
   selection = "none",
-  class = "compact stripe hover",
+  class = "compact hover",
   options = list(
     language = dt_language,
     pageLength = 15,
@@ -373,7 +376,7 @@ datatable(
   elementId = "breakdown-table",
   rownames = FALSE,
   selection = "none",
-  class = "compact stripe hover",
+  class = "compact hover",
   options = list(
     language = dt_language,
     pageLength = 15,
@@ -396,6 +399,7 @@ datatable(
 #| label: chart
 #| fig-width: 8
 #| fig-height: 11
+#| dev: ragg_png
 #| fig-alt: !expr tr("chart_alt")
 #| fig-cap: !expr tr("chart_caption", p_min = p_min_lab)
 chart_data <- site_tbl |>
@@ -404,10 +408,15 @@ chart_data <- site_tbl |>
     row = fct_reorder(paste(site_name, species, sep = "__"), habitat_ha)
   )
 
+# AOPK ČR web palette and Franklin Gothic (ragg finds it by family name;
+# without it the chart falls back to the default sans)
+aopk_text <- "#36332a"
+aopk_green <- "#006c4e"
+
 ggplot(chart_data, aes(x = habitat_ha, y = row, fill = species)) +
   geom_col(width = 0.72) +
   geom_text(aes(label = fmt_num(habitat_ha, 0.1)),
-            hjust = -0.15, size = 3, colour = "#52514e") +
+            hjust = -0.15, size = 3.2, colour = aopk_text, family = "Franklin Gothic Book") +
   facet_grid(rows = vars(panel), scales = "free_y", space = "free_y") +
   scale_y_discrete(labels = \(x) sub("__.*$", "", x)) +
   scale_x_continuous(labels = \(x) fmt_num(x, 1),
@@ -415,14 +424,15 @@ ggplot(chart_data, aes(x = habitat_ha, y = row, fill = species)) +
   scale_fill_manual(values = set_names(species_info$colour, species_info$species),
                     guide = "none") +
   labs(x = tr("chart_x"), y = NULL) +
-  theme_minimal(base_size = 11) +
+  theme_minimal(base_size = 12, base_family = "Franklin Gothic Book") +
   theme(
     panel.grid.major.y = element_blank(),
     panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_line(colour = "#e1e0d9", linewidth = 0.3),
-    axis.text.y = element_text(colour = "#0b0b0b"),
-    axis.title.x = element_text(colour = "#52514e", margin = margin(t = 8)),
-    strip.text.y = element_text(face = "bold", size = 11),
+    panel.grid.major.x = element_line(colour = "#dcdad6", linewidth = 0.3),
+    axis.text = element_text(colour = aopk_text),
+    axis.title.x = element_text(colour = aopk_text, margin = margin(t = 8)),
+    strip.text.y = element_text(family = "Franklin Gothic Demi", colour = aopk_green,
+                                size = 12),
     plot.background = element_rect(fill = "white", colour = NA)
   )
 ```
